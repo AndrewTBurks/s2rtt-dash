@@ -1,0 +1,24 @@
+{
+  "name": "s2rtt-dash",
+  "version": "0.0.1",
+  "description": "Dashboard visualization of SAGE2RTT resource usage from system, GPU, and Docker.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewTBurks/s2rtt-dash.git"
+  },
+  "author": "Andrew Burks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndrewTBurks/s2rtt-dash/issues"
+  },
+  "homepage": "https://github.com/AndrewTBurks/s2rtt-dash#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "node-docker-api": "^1.1.12"
+  }
+}
