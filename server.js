@@ -1,3 +1,4 @@
+let fs = require('fs');
 let request = require('request');
 let express = require('express');
 let Docker = require('node-docker-api').Docker;
@@ -9,7 +10,8 @@ let docker = new Docker({
   socketPath: '/var/run/docker.sock'
 });
 
-let timeData = {};
+// let timeData = {};
+
 let systemState = {};
 let dockerState = {};
 
@@ -67,14 +69,18 @@ function sFlowDataUpdate() {
   });
 }
 
-function dockerDataUpdate() {
-  docker.container.list()
-    .then((containers) => containers.map(container => container.status()))
-    .then((containerStatuses) => containerStatuses.map(containerStatus => containerStatus.stats()))
-    .then((stats) => stats.forEach(stat => {
-      stat.on('data', (stat) => {
-        dockerState = stat;
-      })
-      stat.on('error', (err) => console.log('Error: ', err))
-    }));
+docker.container.list()
+.then((containers) => containers.map(container => container.status()))
+.then((containerStatuses) => containerStatuses.map(containerStatus => containerStatus.stats()))
+.then((stats) => stats.forEach(stat => {
+  stat.on('data', (stat) => {
+    fs.createFileReadStream(stat).pipe(dockerDataUpdate);
+  })
+  stat.on('error', (err) => console.log('Error: ', err))
+}));
+
+function dockerDataUpdate(data) {
+  // let api = "http://unix:/var/run/docker.sock:/containers/#{ARGV[0]}/stats";
+
+  console.log(data);
 }
