@@ -2,10 +2,16 @@ let request = require('request');
 let express = require('express');
 let Docker = require('node-docker-api').Docker;
 
-let app = express();
-let docker = new Docker({ socketPath: '/var/run/docker.sock' });
+let _ = require('lodash');
 
-let data = null;
+let app = express();
+let docker = new Docker({
+  socketPath: '/var/run/docker.sock'
+});
+
+let timeData = {};
+let systemState = {};
+let dockerState = {};
 
 app.listen(6969, function() {
   console.log("Dashboard served on 6969")
@@ -15,22 +21,60 @@ app.use(express.static('WWW'));
 
 app.get('/api/json/', function(req, res) {
   res.type('application/json');
-  res.send(data);
+  res.send({
+    system: systemState,
+    docker: dockerState
+  });
 });
 
+
+// start data update cycle
+let dataUpdateInterval = setInterval(function() {
+  sFlowDataUpdate();
+  // dockerDataUpdate();
+}, 5000);
+
+// sage2rtt sflow endpoint
 let api = "http://sage2rtt.evl.uic.edu:8008/metric/131.193.183.208/json";
 
-request(api, function(error, response, body) {
-  data = JSON.parse(body);
-  console.log(data);
+function sFlowDataUpdate() {
+  let date = Date.now();
 
-  let nvidia = {};
-});
+  request(api, function(error, response, body) {
+    let data = JSON.parse(body);
+    // console.log(data);
 
-// docker.container.list()
-//   .then((containers) => containers.map(container => container.status()))
-//   .then((containerStatuses) => containerStatuses.map(containerStatus => containerStatus.stats()))
-//   .then((stats) => stats.forEach(stat => {
-//       stat.on('data', (stat) => console.log('Stats: ',stat))
-//       stat.on('error', (err) => console.log('Error: ', err))
-//     }));
+    let organized = {
+      cpu: {},
+      gpu: {},
+      disk: {}
+    };
+
+    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, "2.1.cpu")), (cpuKey) => {
+      organized.cpu[cpuKey] = data[cpuKey];
+    });
+
+    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, "2.1.nvml")), (gpuKey) => {
+      organized.gpu[gpuKey] = data[gpuKey];
+    });
+
+    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, "2.1.disk")), (diskKey) => {
+      organized.disk[diskKey] = data[diskKey];
+    });
+
+    systemState = organized;
+    // console.log("System State updated", date);
+  });
+}
+
+function dockerDataUpdate() {
+  docker.container.list()
+    .then((containers) => containers.map(container => container.status()))
+    .then((containerStatuses) => containerStatuses.map(containerStatus => containerStatus.stats()))
+    .then((stats) => stats.forEach(stat => {
+      stat.on('data', (stat) => {
+        dockerState = stat;
+      })
+      stat.on('error', (err) => console.log('Error: ', err))
+    }));
+}

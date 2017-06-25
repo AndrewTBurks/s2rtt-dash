@@ -19,6 +19,7 @@
   "homepage": "https://github.com/AndrewTBurks/s2rtt-dash#readme",
   "dependencies": {
     "express": "^4.15.3",
+    "lodash": "^4.17.4",
     "node-docker-api": "^1.1.12",
     "request": "^2.81.0"
   }
