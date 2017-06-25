@@ -1,0 +1,75 @@
+html,
+body,
+.container-fluid {
+  height: 100%;
+  background: @background;
+  color: @font-color;
+}
+
+.pageHalf {
+  padding: 15px;
+}
+
+.sectionTop {
+  padding: 0 0 10px 0;
+}
+
+.sectionBot {
+  padding: 10px 0 0 0;
+}
+
+.sectionWrapper {
+  background: tint(@background, 5%);
+  border: 2px solid fadeout(tint(@background, 20%), 20%);
+
+  // margin: 15px;
+}
+
+.sectionHeader {
+  // background: white;
+  // border: 1px solid black;
+
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.sectionBody {
+  background: lightblue;
+}
+
+
+#nvidiaLogo {
+  background: white;
+  padding: 5px;
+}
+
+
+
+// functions
+
+.box-sizing(@param) {
+  -webkit-box-sizing: @param;
+     -moz-box-sizing: @param;
+          box-sizing: @param;
+}
+
+.box-shadow(@param) {
+  -webkit-box-shadow: @param;
+     -moz-box-shadow: @param;
+          box-shadow: @param;
+}
+
+// generates the h-* classes h-0 to h-100 by 5 for % height
+.heightGen(0);
+
+.heightGen(@height) when (@height <= 100) {
+  .h-@{height} {
+    height: (@height * 100% / 100);
+  }
+  .heightGen(@height + 5);
+}
+
+@background: #1C2329;
+@font-color: #e0e0e0;
+
+@nvidia-color: #77b900;
