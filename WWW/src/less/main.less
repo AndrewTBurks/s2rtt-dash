@@ -22,21 +22,60 @@ body,
   background: tint(@background, 5%);
   border: 2px solid fadeout(tint(@background, 20%), 20%);
 
+  .border-radius(@panel-radius @panel-radius 0 0);
+
   // margin: 15px;
 }
 
 .sectionHeader {
-  // background: white;
-  // border: 1px solid black;
+  font-weight: bolder;
 
   text-align: center;
   padding: 20px 10px;
+
+  .border-radius(@panel-radius @panel-radius 0 0);
 }
 
 .sectionBody {
-  background: lightblue;
+
 }
 
+#cpuHeader {
+  font-size: 20px;
+  color: @cpu-color;
+}
+
+#cpuSection {
+  @import "panels/cpu.less";
+
+  background: @cpu-color;
+}
+
+#diskHeader {
+  font-size: 20px;
+  color: @disk-color;
+}
+
+#diskSection {
+  @import "panels/disk.less";
+
+  background: @disk-color;
+}
+
+#gpuSection {
+  @import "panels/gpu.less";
+
+  background: @nvidia-color;
+}
+
+#sage2Section {
+  @import "panels/sage2.less";
+
+  background: @sage2-color;
+  max-height: 85%;
+
+  overflow-y: scroll;
+}
 
 #nvidiaLogo {
   background: white;
@@ -46,6 +85,12 @@ body,
 
 
 // functions
+
+.border-radius(@param) {
+  -webkit-border-radius: @param;
+     -moz-border-radius: @param;
+          border-radius: @param;
+}
 
 .box-sizing(@param) {
   -webkit-box-sizing: @param;
@@ -69,7 +114,13 @@ body,
   .heightGen(@height + 5);
 }
 
+@panel-radius: 15px;
+
 @background: #1C2329;
 @font-color: #e0e0e0;
 
+@cpu-color: #fd8d3c;
+@disk-color: #43a2ca;
+
 @nvidia-color: #77b900;
+@sage2-color: #00ba7b;
