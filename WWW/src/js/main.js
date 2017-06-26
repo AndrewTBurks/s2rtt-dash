@@ -2,32 +2,40 @@
 
 var App = App || {};
 
+// document initialization promise
+let documentReadyPromise = new Promise(function(resolve, reject) {
+  $(document).ready(resolve);
+});
+
+Promise.all([less.pageLoadFinished, documentReadyPromise])
+  .then(function() {
+    App.init();
+  });
+
+window.onresize = function() {
+  App.resize();
+};
+
 (function() {
+  App.models = {};
+  App.views = {};
+  App.controllers = {};
+
+
   App.init = function() {
     console.log("body loaded");
 
-    serverDataUpdate();
-
-    App.dataUpdateInterval = setInterval(function() {
-      serverDataUpdate();
-    }, 5000);
+    App.views.cpu = new CpuView("#cpuSection");
+    App.views.disk = new DiskView("#diskSection");
+    App.views.gpu = new GpuView("#gpuSection");
+    
+    App.controllers.dataUpdate = new DataUpdateController();
   };
 
-
-  function serverDataUpdate() {
-    let req = new XMLHttpRequest();
-    req.open("GET", "http://localhost:6969/api/json/");
-
-    req.onload = newDataLoaded;
-
-    req.onerror = function(err) {
-      console.log(err);
-    }
-
-    req.send();
-    
-    function newDataLoaded() {
-      console.log(JSON.parse(req.response));
+  App.resize = function() {
+    // resize all views
+    for(let view of Object.values(App.views)) {
+      view.resize();
     }
   }
 

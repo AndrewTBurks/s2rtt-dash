@@ -1,0 +1,53 @@
+// parent div which this is imported into
+& {
+  // center SVG horizontally
+  text-align: center;
+}
+
+svg {
+  // center SVG vertically also
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.track {
+  stroke-width: 6px;
+  // stroke: shade(@disk-color, 50%);
+  stroke: desaturate(@disk-color, 50%);
+
+  fill: none;
+}
+
+.used {
+  fill: @disk-color;
+  stroke: tint(@disk-color, 15%);
+  stroke-width: 3px;
+  stroke-opacity: 0.3;
+}
+
+.free {
+  @disk-free-color: desaturate(shade(@disk-color, 25%), 50%);
+
+  fill: @disk-free-color;
+  stroke: shade(@disk-free-color, 15%);
+  stroke-width: 3px;
+  stroke-opacity: 0.3;
+}
+
+.percentage {
+  text-anchor: middle;
+
+  fill: @disk-color;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.sizeText {
+  text-anchor: middle;
+
+  fill: desaturate(@disk-color, 50%);
+  font-size: 12px;
+  font-weight: bold;
+
+}

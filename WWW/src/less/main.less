@@ -20,7 +20,7 @@ body,
 
 .sectionWrapper {
   background: tint(@background, 5%);
-  border: 2px solid fadeout(tint(@background, 20%), 20%);
+  border: 3px solid fadeout(tint(@background, 20%), 20%);
 
   .border-radius(@panel-radius @panel-radius 0 0);
 
@@ -33,6 +33,7 @@ body,
   text-align: center;
   padding: 20px 10px;
 
+  border-bottom: 1.5px solid fadeout(tint(@background, 20%), 20%);
   .border-radius(@panel-radius @panel-radius 0 0);
 }
 
@@ -59,7 +60,7 @@ body,
 #diskSection {
   @import "panels/disk.less";
 
-  background: @disk-color;
+  // background: @disk-color;
 }
 
 #gpuSection {
@@ -82,6 +83,9 @@ body,
   padding: 5px;
 }
 
+svg {
+  // background: fadeout(@background, 15%);
+}
 
 
 // functions
