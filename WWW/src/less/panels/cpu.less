@@ -1,0 +1,115 @@
+// parent div which this is imported into
+& {
+  // center SVG horizontally
+  text-align: center;
+}
+
+svg {
+  // center SVG vertically also
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.systemBar {
+  fill: @cpu-system-color;
+  stroke: shade(@cpu-system-color, 25%);
+  stroke-width: 3px;
+  stroke-opacity: 0.3;
+}
+
+.userBar {
+  fill: @cpu-color;
+  stroke: shade(@cpu-color, 25%);
+  stroke-width: 3px;
+  stroke-opacity: 0.3;
+}
+
+.wioBar {
+  fill: @cpu-track-color;
+  stroke: shade(@cpu-track-color, 25%);
+  stroke-width: 3px;
+  stroke-opacity: 0.3;
+}
+
+.smallText {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.systemText {
+  .smallText;
+
+  text-anchor: start;
+  fill: @cpu-system-color;
+}
+
+.userText {
+  .smallText;
+
+
+text-anchor: middle;
+  fill: @cpu-color;
+}
+
+.wioText {
+  .smallText;
+
+  text-anchor: end;
+  fill: @cpu-track-color;
+}
+
+.infoText {
+  .smallText;
+
+  text-anchor: middle;
+  fill: @cpu-track-color;
+}
+
+.systemArc {
+  fill: @cpu-system-color;
+  stroke: shade(@cpu-system-color, 25%);
+  stroke-width: 3px;
+  stroke-opacity: 0.3;
+}
+
+.userArc {
+  fill: @cpu-color;
+  stroke: shade(@cpu-color, 25%);
+  stroke-width: 3px;
+  stroke-opacity: 0.3;
+}
+
+.wioArc {
+  fill: @cpu-track-color;
+  stroke: shade(@cpu-track-color, 25%);
+  stroke-width: 3px;
+  stroke-opacity: 0.3;
+}
+
+.idleArc {
+  fill: @cpu-free-color;
+  stroke: shade(@cpu-free-color, 25%);
+  stroke-width: 3px;
+  stroke-opacity: 0.3;
+}
+
+.track {
+  stroke-width: 6px;
+  stroke: desaturate(@disk-color, 50%);
+
+  fill: none;
+}
+
+.mainText {
+  text-anchor: middle;
+
+  fill: @cpu-color;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@cpu-track-color: desaturate(@disk-color, 50%);
+@cpu-system-color: shade(@cpu-color, 30%);
+// @cpu-color
+@cpu-free-color: shade(@cpu-track-color, 25%);

@@ -27,7 +27,7 @@ app.get('/api/json/', function(req, res) {
 // start data update cycle
 let dataUpdateInterval = setInterval(function() {
   sFlowDataUpdate();
-}, 5000);
+}, 1000);
 
 // sage2rtt sflow endpoint
 let api = "http://sage2rtt.evl.uic.edu:8008/metric/131.193.183.208/json";
