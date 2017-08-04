@@ -20,12 +20,14 @@ let CpuView = function(div) {
   }
 
   function createSVG() {
-    let width = self.div.node().clientWidth;
-    let height = self.div.node().parentNode.clientHeight - 41.5; // - section header height
+    let body = self.div.select(".sectionBody");
+
+    let width = body.node().clientWidth;
+    let height = self.div.node().clientHeight - self.div.select(".sectionHeader").node().clientHeight; // - section header height
 
     let side = d3.min([width, height]);
 
-    self.svg = self.div.append("svg")
+    self.svg = body.append("svg")
       .attr("width", width)
       .attr("height", height)
       .attr("viewBox", [0, 0, width, height].join(" "));
@@ -242,8 +244,10 @@ let CpuView = function(div) {
   }
 
   function resize() {
-    let width = self.div.node().clientWidth;
-    let height = self.div.node().clientHeight;
+    let body = self.div.select(".sectionBody");
+
+    let width = body.node().clientWidth;
+    let height = self.div.node().clientHeight - self.div.select(".sectionHeader").node().clientHeight; // - section header height
 
     let side = d3.min([width, height]);
 

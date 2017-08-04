@@ -17,17 +17,21 @@ let GpuView = function(div) {
   }
 
   function createSVG() {
-    let width = self.div.node().clientWidth;
-    let height = self.div.node().clientHeight;
+    let body = self.div.select(".sectionBody");
 
-    self.svg = self.div.append("svg")
+    let width = body.node().clientWidth;
+    let height = self.div.node().clientHeight - self.div.select(".sectionHeader").node().clientHeight; // - section header height
+
+    self.svg = body.append("svg")
       .attr("width", width)
       .attr("height", height);
   }
 
   function resize() {
-    let width = self.div.node().clientWidth;
-    let height = self.div.node().clientHeight;
+    let body = self.div.select(".sectionBody");
+
+    let width = body.node().clientWidth;
+    let height = self.div.node().clientHeight - self.div.select(".sectionHeader").node().clientHeight; // - section header height
 
     let side = d3.min([width, height]);
 

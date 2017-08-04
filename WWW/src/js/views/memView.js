@@ -17,15 +17,22 @@ let MemView = function(div) {
   }
 
   function createSVG() {
-    let width = self.div.node().clientWidth;
-    let height = self.div.node().clientHeight;
+    let body = self.div.select(".sectionBody");
 
-    self.svg = self.div.append("svg")
+    let width = body.node().clientWidth;
+    let height = self.div.node().clientHeight - self.div.select(".sectionHeader").node().clientHeight; // - section header height
+
+    self.svg = body.append("svg")
       .attr("width", width)
       .attr("height", height);
+
+    self.width = width;
+    self.height = height;
   }
 
   function drawMemUtil(memData) {
+
+
     console.log(App.util.calc.BtoGB(memData.used) + " GB used");
     console.log(App.util.calc.BtoGB(memData.free) + " GB free");
     console.log(App.util.calc.BtoGB(memData.cached) + " GB cached");
@@ -35,8 +42,10 @@ let MemView = function(div) {
   }
 
   function resize() {
-    let width = self.div.node().clientWidth;
-    let height = self.div.node().clientHeight;
+    let body = self.div.select(".sectionBody");
+
+    let width = body.node().clientWidth;
+    let height = self.div.node().clientHeight - self.div.select(".sectionHeader").node().clientHeight; // - section header height
 
     let side = d3.min([width, height]);
 

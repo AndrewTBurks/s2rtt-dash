@@ -19,15 +19,18 @@ let DiskView = function(div) {
   }
 
   function createSVG() {
-    let width = self.div.node().clientWidth;
-    let height = self.div.node().clientHeight;
+    let body = self.div.select(".sectionBody");
+
+    let width = body.node().clientWidth;
+    let height = self.div.node().clientHeight - self.div.select(".sectionHeader").node().clientHeight; // - section header height
 
     let side = d3.min([width, height]);
 
-    self.svg = self.div.append("svg")
-      .attr("width", side)
-      .attr("height", side)
-      .attr("viewBox", [0, 0, side, side].join(" "));
+    self.svg = body.append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [0, 0, side, side].join(" "))
+      // .attr("preserveAspectRatio", "xMidYMid");
 
     self.dimension = side;
   }
@@ -95,14 +98,16 @@ let DiskView = function(div) {
   }
 
   function resize() {
-    let width = self.div.node().clientWidth;
-    let height = self.div.node().clientHeight;
+    let body = self.div.select(".sectionBody");
+
+    let width = body.node().clientWidth;
+    let height = self.div.node().clientHeight - self.div.select(".sectionHeader").node().clientHeight; // - section header height
 
     let side = d3.min([width, height]);
 
     self.svg
-      .attr("width", side)
-      .attr("height", side);
+      .attr("width", width)
+      .attr("height", height);
   }
 
   return {
