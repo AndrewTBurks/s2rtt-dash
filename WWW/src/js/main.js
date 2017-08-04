@@ -26,9 +26,10 @@ window.onresize = function() {
     console.log("body loaded");
 
     App.views.cpu = new CpuView("#cpuSection");
+    App.views.mem = new MemView("#memSection");
     App.views.disk = new DiskView("#diskSection");
     App.views.gpu = new GpuView("#gpuSection");
-    
+
     App.controllers.dataUpdate = new DataUpdateController();
   };
 

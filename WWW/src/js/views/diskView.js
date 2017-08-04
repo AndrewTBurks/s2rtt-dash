@@ -91,11 +91,7 @@ let DiskView = function(div) {
     self.svg.append("text")
       .attr("class", "sizeText")
       .attr("transform", `translate(${side/2}, ${side/2 + 14})`)
-      .text(formatSize(diskData.total - diskData.free) + " / " + formatSize(diskData.total));
-
-    function formatSize(size) {
-      return (size/1e9).toFixed(2) + " GB"
-    }
+      .text(App.util.calc.BtoGB(diskData.total - diskData.free) + " GB / " + App.util.calc.BtoGB(diskData.total) + " GB");
   }
 
   function resize() {

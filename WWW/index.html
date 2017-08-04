@@ -22,11 +22,18 @@
   <script src="lib/js/less.min.js" charset="utf-8"></script>
 
   <!-- JS Src -->
+
+  <!-- Util -->
+  <script src="src/js/util/calc.js"></script>
+
+  <!-- Views -->
   <script src="src/js/views/cpuView.js"></script>
+  <script src="src/js/views/memView.js"></script>
   <script src="src/js/views/diskView.js"></script>
   <script src="src/js/views/gpuView.js"></script>
   <script src="src/js/views/sage2View.js"></script>
 
+  <!-- Models  -->
   <script src="src/js/controllers/dataUpdateController.js"></script>
 
   <script src="src/js/main.js"></script>
@@ -36,24 +43,46 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">SAGE2-RTT</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="https://sage2rtt.evl.uic.edu:9001/">Cloud Portal</a></li>
+        <li><a href="http://sage2rtt.evl.uic.edu:3000">Data Services</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid" id="dashboard">
     <div class="row h-100">
       <div class="col-md-6 h-100 pageHalf">
         <div class="row h-50 sectionTop">
-          <div class="col-md-6 h-100">
+          <div class="col-md-4 h-100">
             <div class="sectionWrapper h-100">
-              <div class="h-15 sectionHeader" id="cpuHeader">
+              <div class="sectionHeader" id="cpuHeader">
                 CPU
               </div>
-              <div class="h-85 sectionBody" id="cpuSection">
+              <div class="sectionBody" id="cpuSection">
 
               </div>
             </div>
           </div>
-          <div class="col-md-6 h-100">
+          <div class="col-md-4 h-100">
             <div class="sectionWrapper h-100">
-              <div class="h-15 sectionHeader" id="diskHeader">
-                  DISK
+              <div class="sectionHeader" id="memHeader">
+                MEMORY
+              </div>
+              <div class="h-85 sectionBody" id="memSection">
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 h-100">
+            <div class="sectionWrapper h-100">
+              <div class="sectionHeader" id="diskHeader">
+                DISK
               </div>
               <div class="h-85 sectionBody" id="diskSection">
 

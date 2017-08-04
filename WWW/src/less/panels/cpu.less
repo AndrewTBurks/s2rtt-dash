@@ -6,28 +6,30 @@
 
 svg {
   // center SVG vertically also
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  // position: relative;
+  // top: 50%;
+  // transform: translateY(-50%);
+}
+
+.test {
+  fill: none;
+  stroke: white;
 }
 
 .systemBar {
-  fill: @cpu-system-color;
-  stroke: shade(@cpu-system-color, 25%);
+  .fill-shade-stroke(@cpu-system-color);
   stroke-width: 3px;
   stroke-opacity: 0.3;
 }
 
 .userBar {
-  fill: @cpu-color;
-  stroke: shade(@cpu-color, 25%);
+  .fill-shade-stroke(@cpu-color);
   stroke-width: 3px;
   stroke-opacity: 0.3;
 }
 
 .wioBar {
-  fill: @cpu-track-color;
-  stroke: shade(@cpu-track-color, 25%);
+  .fill-shade-stroke(@cpu-track-color);
   stroke-width: 3px;
   stroke-opacity: 0.3;
 }
@@ -67,36 +69,32 @@ text-anchor: middle;
 }
 
 .systemArc {
-  fill: @cpu-system-color;
-  stroke: shade(@cpu-system-color, 25%);
+  .fill-shade-stroke(@cpu-system-color);
   stroke-width: 3px;
   stroke-opacity: 0.3;
 }
 
 .userArc {
-  fill: @cpu-color;
-  stroke: shade(@cpu-color, 25%);
+  .fill-shade-stroke(@cpu-color);
   stroke-width: 3px;
   stroke-opacity: 0.3;
 }
 
 .wioArc {
-  fill: @cpu-track-color;
-  stroke: shade(@cpu-track-color, 25%);
+  .fill-shade-stroke(@cpu-track-color);
   stroke-width: 3px;
   stroke-opacity: 0.3;
 }
 
 .idleArc {
-  fill: @cpu-free-color;
-  stroke: shade(@cpu-free-color, 25%);
+  .fill-shade-stroke(@cpu-free-color);
   stroke-width: 3px;
   stroke-opacity: 0.3;
 }
 
 .track {
   stroke-width: 6px;
-  stroke: desaturate(@disk-color, 50%);
+  stroke: @cpu-track-color;
 
   fill: none;
 }
@@ -109,7 +107,7 @@ text-anchor: middle;
   font-weight: bold;
 }
 
+// @cpu-color
 @cpu-track-color: desaturate(@disk-color, 50%);
 @cpu-system-color: shade(@cpu-color, 30%);
-// @cpu-color
 @cpu-free-color: shade(@cpu-track-color, 25%);

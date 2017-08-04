@@ -42,7 +42,8 @@ function sFlowDataUpdate() {
     system = {
       cpu: {},
       gpu: {},
-      disk: {}
+      disk: {},
+      mem: {}
     };
 
     sage2cloud = {};
@@ -53,13 +54,18 @@ function sFlowDataUpdate() {
     });
 
     let gputag = "2.1.nvml";
-    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, "2.1.nvml")), (gpuKey) => {
+    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, gputag)), (gpuKey) => {
       system.gpu[gpuKey.slice(gputag.length + 1)] = data[gpuKey];
     });
 
     let disktag = "2.1.disk";
-    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, "2.1.disk")), (diskKey) => {
+    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, disktag)), (diskKey) => {
       system.disk[diskKey.slice(disktag.length + 1)] = data[diskKey];
+    });
+
+    let memtag = "2.1.mem";
+    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, memtag)), (memKey) => {
+      system.mem[memKey.slice(memtag.length + 1)] = data[memKey];
     });
 
     // host ids of processes that are sage2 cloud servers

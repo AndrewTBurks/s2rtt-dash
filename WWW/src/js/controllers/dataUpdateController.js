@@ -13,7 +13,7 @@ let DataUpdateController = function() {
     // start periodic data update
     startPeriodicDataUpdate();
 
-    stopPeriodicDataUpdate(); // comment out normally
+    // stopPeriodicDataUpdate(); // comment out normally
   };
 
   function startPeriodicDataUpdate() {
@@ -43,9 +43,11 @@ let DataUpdateController = function() {
 
     function newDataLoaded() {
       let data = JSON.parse(req.response);
-      console.log(data);
+
+      console.log(data.system);
 
       App.views.cpu.drawCpuUtil(data.system.cpu);
+      App.views.mem.drawMemUtil(data.system.mem);
       App.views.disk.drawDiskUtil(data.system.disk);
     }
   }

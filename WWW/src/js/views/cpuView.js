@@ -5,7 +5,10 @@ var App = App || {};
 let CpuView = function(div) {
   let self = {
     div: null,
-    svg: null
+    svg: null,
+
+    width: null,
+    height: null
   };
 
   init();
@@ -18,85 +21,97 @@ let CpuView = function(div) {
 
   function createSVG() {
     let width = self.div.node().clientWidth;
-    let height = self.div.node().clientHeight;
+    let height = self.div.node().parentNode.clientHeight - 41.5; // - section header height
 
     let side = d3.min([width, height]);
 
     self.svg = self.div.append("svg")
-      .attr("width", side)
-      .attr("height", side)
-      .attr("viewBox", [0, 0, side, side].join(" "));
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [0, 0, width, height].join(" "));
 
-    self.dimension = side;
+    self.width = width;
+    self.height = height;
   }
 
   function drawCpuUtil(cpuData) {
     let outerMargin = 25;
     let innerMargin = 10;
 
-    let side = self.dimension;
+    let width = self.width;
+    let height = self.height;
 
     self.svg.selectAll("*").remove();
 
-    let infoPaneWidth = side / 4 - outerMargin - innerMargin / 2;
-    // let infoPaneHeight = side - outerMargin * 2;
-    let infoPaneHeight = (3 * side / 4) - outerMargin - innerMargin / 2;
+    let infoPaneWidth = width - 2 * outerMargin;
+    let infoPaneHeight = (height / 4) - outerMargin - innerMargin / 2;
     let infoPaneOffset = {
       x: outerMargin,
       y: outerMargin
     };
 
-    let piePaneWidth = (3 * side / 4) - outerMargin - innerMargin / 2;
-    let piePaneHeight = piePaneWidth;
+    let piePaneWidth = width - 2 * outerMargin;
+    let piePaneHeight = height / 2 - innerMargin;
     let piePaneOffset = {
-      x: side / 4 + innerMargin / 2,
-      y: outerMargin
+      x: outerMargin + (width - (outerMargin * 2) - piePaneWidth) / 2,
+      y: (height / 4) + (height / 2 - piePaneHeight) / 2
     };
 
-    // let barPaneWidth = (3 * side / 4) - outerMargin - innerMargin / 2;
-    let barPaneWidth = side - 2 * outerMargin;
-    let barPaneHeight = side / 4 - outerMargin - innerMargin / 2;
+    let barPaneWidth = width - 2 * outerMargin;
+    let barPaneHeight = height / 4 - outerMargin - innerMargin / 2;
     let barPaneOffset = {
       x: outerMargin,
-      // x: side / 4 + innerMargin / 2,
-      y: (3 * side / 4) + innerMargin / 2
+      y: (3 * height / 4) + innerMargin / 2
     };
 
     // draw info
     // height of one pair of text
     let textHeight = 25 + 12 + 4;
-    let textCenter1 = infoPaneHeight / 4;
-    let textCenter2 = 3 * infoPaneHeight / 4;
+    let textCenter1 = infoPaneWidth / 2 - 20;
+    let textCenter2 = infoPaneWidth / 2 + 20;
+
+    let textCenter3 = infoPaneWidth / 2;
 
     let infoGroup = self.svg.append("g")
       .attr("transform", `translate(${infoPaneOffset.x}, ${infoPaneOffset.y})`);
 
-    let numberSign = infoGroup.append("text")
-      .attr("class", "infoText")
-      .attr("x", infoPaneWidth / 2)
-      .attr("y", textCenter1 - textHeight / 2 + 12)
-      .text("# CPU");
-
     let numberCPU = infoGroup.append("text")
       .attr("class", "mainText")
-      .attr("x", infoPaneWidth / 2)
-      .attr("y", textCenter1 + textHeight / 2)
+      .attr("x", textCenter1)
+      .attr("y", infoPaneHeight / 2)
+      .style("text-anchor", "end")
       .text(cpuData.num);
 
     let speedNumber = infoGroup.append("text")
       .attr("class", "mainText")
-      .attr("x", infoPaneWidth / 2)
-      .attr("y", textCenter2 - textHeight / 2 + 25)
-      .text((cpuData.speed/1000).toFixed(1));
+      .attr("x", textCenter2)
+      .attr("y", infoPaneHeight / 2)
+      .style("text-anchor", "start")
+      .text((cpuData.speed / 1024).toFixed(1));
+
+    let numberSign = infoGroup.append("text")
+      .attr("class", "infoText")
+      .attr("x", textCenter1)
+      .attr("y", infoPaneHeight / 2 + 13)
+      .style("text-anchor", "end")
+      .text("CPU");
 
     let speedUnits = infoGroup.append("text")
       .attr("class", "infoText")
-      .attr("x", infoPaneWidth / 2)
-      .attr("y", textCenter2 + textHeight / 2)
+      .attr("x", textCenter2)
+      .attr("y", infoPaneHeight / 2 + 13)
+      .style("text-anchor", "start")
       .text("GHz");
 
+    infoGroup.append("text")
+      .attr("class", "infoText")
+      .attr("x", textCenter3)
+      .attr("y", infoPaneHeight / 2 - 4)
+      .style("text-anchor", "middle")
+      .text("at");
+
     // draw pie
-    let outerRadiusMax = piePaneWidth / 2 - innerMargin / 4;
+    let outerRadiusMax = d3.min([piePaneWidth, piePaneHeight]) / 2 - innerMargin / 4;
     let innerRadiusMin = 2 * outerRadiusMax / 3;
 
     let arcThickness = outerRadiusMax - innerRadiusMin;
@@ -146,9 +161,8 @@ let CpuView = function(div) {
     let pieGroup = self.svg.append("g")
       .attr("transform", `translate(${piePaneOffset.x}, ${piePaneOffset.y})`);
 
-
     let pieG = pieGroup.append("g")
-      .attr("transform", `translate(${outerRadiusMax}, ${outerRadiusMax})`);
+      .attr("transform", `translate(${piePaneWidth/2}, ${piePaneHeight/2})`);
 
     pieG.append("circle")
       .attr("class", "track")
@@ -165,7 +179,7 @@ let CpuView = function(div) {
     // add text in middle
     pieGroup.append("text")
       .attr("class", "mainText")
-      .attr("transform", `translate(${piePaneWidth/2}, ${piePaneHeight/2 - 2})`)
+      .attr("transform", `translate(${piePaneWidth/2}, ${piePaneHeight/2 + 5})`)
       .text(cpuData.utilization.toFixed(2) + "%");
 
     // draw bar
@@ -234,8 +248,8 @@ let CpuView = function(div) {
     let side = d3.min([width, height]);
 
     self.svg
-      .attr("width", side)
-      .attr("height", side);
+      .attr("width", width)
+      .attr("height", height);
   }
 
   return {
