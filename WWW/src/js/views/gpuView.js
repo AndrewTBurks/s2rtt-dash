@@ -27,6 +27,10 @@ let GpuView = function(div) {
       .attr("height", height);
   }
 
+  function drawGpuUtil(gpuData) {
+
+  }
+
   function resize() {
     let body = self.div.select(".sectionBody");
 
@@ -41,6 +45,7 @@ let GpuView = function(div) {
   }
 
   return {
-    resize
+    resize,
+    drawGpuUtil
   };
 };

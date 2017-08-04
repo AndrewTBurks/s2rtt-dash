@@ -30,7 +30,7 @@ let DiskView = function(div) {
       .attr("width", width)
       .attr("height", height)
       .attr("viewBox", [0, 0, side, side].join(" "))
-      // .attr("preserveAspectRatio", "xMidYMid");
+    // .attr("preserveAspectRatio", "xMidYMid");
 
     self.dimension = side;
   }
@@ -90,6 +90,16 @@ let DiskView = function(div) {
       .attr("class", "percentage")
       .attr("transform", `translate(${side/2}, ${side/2 - 2})`)
       .text(diskData.utilization.toFixed(2) + "%");
+
+    self.svg.append("text")
+      .attr("class", "sizeText")
+      .attr("transform", `translate(${side/2}, ${side/2 + 14})`)
+      .text(App.util.calc.BtoGB(diskData.total - diskData.free) + " GB");
+
+    self.svg.append("text")
+      .attr("class", "sizeText")
+      .attr("transform", `translate(${side/2}, ${side/2 + 14})`)
+      .text(App.util.calc.BtoGB(diskData.total - diskData.free) + " GB / " + App.util.calc.BtoGB(diskData.total) + " GB");
 
     self.svg.append("text")
       .attr("class", "sizeText")

@@ -44,11 +44,14 @@ let DataUpdateController = function() {
     function newDataLoaded() {
       let data = JSON.parse(req.response);
 
-      console.log(data.system);
+      console.log(data);
 
       App.views.cpu.drawCpuUtil(data.system.cpu);
       App.views.mem.drawMemUtil(data.system.mem);
       App.views.disk.drawDiskUtil(data.system.disk);
+      App.views.gpu.drawGpuUtil(data.system.gpu);
+
+      App.views.sage2.updateSAGE2Containers(data.sage2Cloud);
     }
   }
 
