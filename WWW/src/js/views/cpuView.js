@@ -30,10 +30,10 @@ let CpuView = function(div) {
     self.svg = body.append("svg")
       .attr("width", width)
       .attr("height", height)
-      .attr("viewBox", [0, 0, width, height].join(" "));
+      .attr("viewBox", [0, 0, 300, 450].join(" "));
 
-    self.width = width;
-    self.height = height;
+    self.width = 300;
+    self.height = 450;
   }
 
   function drawCpuUtil(cpuData) {

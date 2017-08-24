@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="lib/css/bootstrap.min.css">
 
   <!-- JS Lib -->
+  <script src="lib/js/knockout-min.js" charset="utf-8"></script>
   <script src="lib/js/jquery.min.js" charset="utf-8"></script>
   <script src="lib/js/bootstrap.min.js" charset="utf-8"></script>
   <script src="lib/js/d3.v4.min.js" charset="utf-8"></script>
@@ -30,6 +31,7 @@
   <script src="src/js/views/cpuView.js"></script>
   <script src="src/js/views/memView.js"></script>
   <script src="src/js/views/diskView.js"></script>
+  <script src="src/js/views/netView.js"></script>
   <script src="src/js/views/gpuView.js"></script>
   <script src="src/js/views/sage2View.js"></script>
 
@@ -49,8 +51,10 @@
         <a class="navbar-brand" href="#">SAGE2-RTT</a>
       </div>
       <ul class="nav navbar-nav">
+        <li><a href="https://sage2rtt.evl.uic.edu:4343/">JupyterHub</a></li>
         <li><a href="https://sage2rtt.evl.uic.edu:9001/">Cloud Portal</a></li>
         <li><a href="http://sage2rtt.evl.uic.edu:3000">Data Services</a></li>
+
       </ul>
     </div>
   </nav>
@@ -69,6 +73,18 @@
               </div>
             </div>
           </div>
+          <div class="col-md-8 h-100">
+            <div class="sectionWrapper h-100" id="gpuWrapper">
+              <div class="sectionHeader">
+                <img src="img/Nvidia_Logo_Horizontal.svg" id="nvidiaLogo" class="img-rounded" alt="NVIDIA GPU" style="height:5vmin;">
+              </div>
+              <div class="sectionBody" id="gpuSection">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row h-50 sectionBot">
           <div class="col-md-4 h-100">
             <div class="sectionWrapper h-100" id="memWrapper">
               <div class="sectionHeader" id="memHeader">
@@ -89,18 +105,17 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row h-50 sectionBot">
-          <div class="col-md-12 h-100">
-            <div class="sectionWrapper h-100" id="gpuWrapper">
-              <div class="sectionHeader">
-                <img src="img/Nvidia_Logo_Horizontal.svg" id="nvidiaLogo" class="img-rounded" alt="NVIDIA GPU" style="height:5vmin;">
+          <div class="col-md-4 h-100">
+            <div class="sectionWrapper h-100" id="netWrapper">
+              <div class="sectionHeader" id="netHeader">
+                NET I/O
               </div>
-              <div class="sectionBody" id="gpuSection">
+              <div class="sectionBody" id="netSection">
 
               </div>
             </div>
           </div>
+
         </div>
       </div>
       <div class="col-md-6 h-100 pageHalf">
@@ -108,8 +123,27 @@
           <div class="sectionHeader" id="sage2Header">
             <img src="img/sage2-1400-green1.png" class="img-rounded" alt="SAGE2" style="height:6vmin;">
           </div>
-          <div class="sectionBody" id="sage2Section">
-
+          <div class="sectionBody" id="sage2Section" data-bind="foreach:servers">
+            <div class="server">
+              <p data-bind="text: 'Name: '+vir_host_name"></p>
+              <br>
+              <p class="big">
+                Mem:
+                <span class="val" data-bind="text: App.util.calc.BtoGB(vir_mem_used)"></span> GB
+              </p>
+              <p class="big">
+                CPU:
+                <span class="val" data-bind="text: vir_cpu_utilization.toFixed(2)"></span> %
+              </p>
+              <p class="big">
+                IN:
+                <span class="val" data-bind="text: App.util.calc.BtoMB(vir_bytes_in)"></span> MB
+              </p>
+              <p class="big">
+                OUT:
+                <span class="val" data-bind="text: App.util.calc.BtoMB(vir_bytes_out)"></span> MB
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -28,6 +28,7 @@ window.onresize = function() {
     App.views.cpu = new CpuView("#cpuWrapper");
     App.views.mem = new MemView("#memWrapper");
     App.views.disk = new DiskView("#diskWrapper");
+    App.views.net = new NetView("#netWrapper");
     App.views.gpu = new GpuView("#gpuWrapper");
     App.views.sage2 = new Sage2View("#sage2Wrapper");
 

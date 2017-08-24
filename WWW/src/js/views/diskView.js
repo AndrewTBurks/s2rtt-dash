@@ -2,7 +2,7 @@
 
 var App = App || {};
 
-let DiskView = function(div) {
+let DiskView = function (div) {
   let self = {
     div: null,
     svg: null,
@@ -29,10 +29,10 @@ let DiskView = function(div) {
     self.svg = body.append("svg")
       .attr("width", width)
       .attr("height", height)
-      .attr("viewBox", [0, 0, side, side].join(" "))
-    // .attr("preserveAspectRatio", "xMidYMid");
+      .attr("viewBox", [0, 0, 300, 300].join(" "))
+    .attr("preserveAspectRatio", "xMidYMid");
 
-    self.dimension = side;
+    self.dimension = 300;
   }
 
   function drawDiskUtil(diskData) {
@@ -56,10 +56,10 @@ let DiskView = function(div) {
     ];
 
     let arc = d3.arc()
-      .innerRadius(function(d) {
+      .innerRadius(function (d) {
         return innerRadiusMin + (d.data.type === "free" ? arcThickness / 4 : 0);
       })
-      .outerRadius(function(d) {
+      .outerRadius(function (d) {
         return outerRadiusMax - (d.data.type === "free" ? arcThickness / 4 : 0);
       })
 
@@ -93,18 +93,20 @@ let DiskView = function(div) {
 
     self.svg.append("text")
       .attr("class", "sizeText")
-      .attr("transform", `translate(${side/2}, ${side/2 + 14})`)
+      .attr("transform", `translate(${side/2}, ${side/2 + 18})`)
       .text(App.util.calc.BtoGB(diskData.total - diskData.free) + " GB");
 
-    self.svg.append("text")
-      .attr("class", "sizeText")
-      .attr("transform", `translate(${side/2}, ${side/2 + 14})`)
-      .text(App.util.calc.BtoGB(diskData.total - diskData.free) + " GB / " + App.util.calc.BtoGB(diskData.total) + " GB");
+    self.svg.append("line")
+      .attr("class", "divisionLine")
+      .attr("x1", side / 2 - side / 8)
+      .attr("y1", side / 2 + 22)
+      .attr("x2", side / 2 + side / 8)
+      .attr("y2", side / 2 + 22);
 
     self.svg.append("text")
       .attr("class", "sizeText")
-      .attr("transform", `translate(${side/2}, ${side/2 + 14})`)
-      .text(App.util.calc.BtoGB(diskData.total - diskData.free) + " GB / " + App.util.calc.BtoGB(diskData.total) + " GB");
+      .attr("transform", `translate(${side / 2}, ${side / 2 + 40})`)
+      .text(App.util.calc.BtoGB(diskData.total) + " GB");
   }
 
   function resize() {

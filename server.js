@@ -39,34 +39,28 @@ function sFlowDataUpdate() {
     let data = JSON.parse(body);
     // console.log(data);
 
-    system = {
-      cpu: {},
-      gpu: {},
-      disk: {},
-      mem: {}
+    let keys = {
+      cpu: "2.1.cpu",
+      gpu: "2.1.nvml",
+      disk: "2.1.disk",
+      mem: "2.1.mem",
+      bytes: "2.1.bytes",
+      pkts: "2.1.pkts",
+      tcp: "2.1.tcp",
+      udp: "2.1.udp"
     };
 
+    system = {};
     sage2cloud = {};
 
-    let cputag = "2.1.cpu";
-    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, cputag)), (cpuKey) => {
-      system.cpu[cpuKey.slice(cputag.length + 1)] = data[cpuKey];
-    });
-
-    let gputag = "2.1.nvml";
-    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, gputag)), (gpuKey) => {
-      system.gpu[gpuKey.slice(gputag.length + 1)] = data[gpuKey];
-    });
-
-    let disktag = "2.1.disk";
-    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, disktag)), (diskKey) => {
-      system.disk[diskKey.slice(disktag.length + 1)] = data[diskKey];
-    });
-
-    let memtag = "2.1.mem";
-    _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, memtag)), (memKey) => {
-      system.mem[memKey.slice(memtag.length + 1)] = data[memKey];
-    });
+    for (let datatype of Object.keys(keys)) {
+      let tag = keys[datatype];
+      system[datatype] = {};
+      
+      _.forEach(_.filter(Object.keys(data), (propname) => _.includes(propname, tag)), (propname) => {
+        system[datatype][propname.slice(tag.length + 1)] = data[propname];
+      });
+    }
 
     // host ids of processes that are sage2 cloud servers
     let sage2hostIDs = _.map(

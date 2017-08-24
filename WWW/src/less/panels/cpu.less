@@ -35,7 +35,7 @@ svg {
 }
 
 .smallText {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -103,11 +103,11 @@ text-anchor: middle;
   text-anchor: middle;
 
   fill: @cpu-color;
-  font-size: 25px;
+  font-size: 32px;
   font-weight: bold;
 }
 
 // @cpu-color
-@cpu-track-color: desaturate(@disk-color, 50%);
+@cpu-track-color: desaturate(@cpu-color, 90%);
 @cpu-system-color: shade(@cpu-color, 30%);
 @cpu-free-color: shade(@cpu-track-color, 25%);

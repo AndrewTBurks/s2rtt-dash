@@ -51,7 +51,7 @@ let DataUpdateController = function() {
       App.views.disk.drawDiskUtil(data.system.disk);
       App.views.gpu.drawGpuUtil(data.system.gpu);
 
-      App.views.sage2.updateSAGE2Containers(data.sage2Cloud);
+      App.views.sage2.updateSAGE2Containers(data.sage2cloud);
     }
   }
 

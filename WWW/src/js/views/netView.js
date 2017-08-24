@@ -2,7 +2,7 @@
 
 var App = App || {};
 
-let MemView = function(div) {
+let NetView = function (div) {
   let self = {
     div: null,
     svg: null
@@ -25,20 +25,10 @@ let MemView = function(div) {
     self.svg = body.append("svg")
       .attr("width", width)
       .attr("height", height);
-
-    self.width = width;
-    self.height = height;
   }
 
-  function drawMemUtil(memData) {
+  function drawNetUtil(gpuData) {
 
-
-    // console.log(App.util.calc.BtoGB(memData.used) + " GB used");
-    // console.log(App.util.calc.BtoGB(memData.free) + " GB free");
-    // console.log(App.util.calc.BtoGB(memData.cached) + " GB cached");
-    // console.log(App.util.calc.BtoGB(memData.buffers) + " GB buffers");
-
-    // console.log(App.util.calc.BtoGB(memData.total) + " GB total");
   }
 
   function resize() {
@@ -55,7 +45,7 @@ let MemView = function(div) {
   }
 
   return {
-    drawMemUtil,
-    resize
+    resize,
+    drawNetUtil
   };
 };
