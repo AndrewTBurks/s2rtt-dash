@@ -2,15 +2,21 @@ let request = require('request');
 let express = require('express');
 let _ = require('lodash');
 
+let smi = require('node-nvidia-smi');
+let si = require('systeminformation');
+let df = require('node-df');
+
 let app = express();
 
-let timeData = {};
+let smiData = {};
+let siData = {};
+let dfData = {};
 
 let system = {};
 let sage2cloud = {};
 
-app.listen(6969, function() {
-  console.log("Dashboard served on 6969")
+app.listen(80, function() {
+  console.log("Dashboard served on 80");
 });
 
 app.use(express.static('WWW'));
@@ -21,6 +27,38 @@ app.get('/api/json/', function(req, res) {
     system,
     sage2cloud
   });
+});
+
+// get gpu and si data once
+
+// gpu information
+smi(function (err, data) {
+ 
+  // handle errors 
+  if (err) {
+    console.warn(err);
+    process.exit(1);
+  }
+ 
+  // display GPU information 
+  smiData = data;
+    console.log(JSON.stringify(data, null, ' '));
+});
+
+// system information
+si.getStaticData(function (data) {
+    siData = data;
+});
+
+//si.battery(function (data) {
+//    console.log(data);
+//});
+
+
+// filesystem info (mounted drives)
+df(function (error, response) {
+    if (error) { throw error; }
+    dfData = response;
 });
 
 
