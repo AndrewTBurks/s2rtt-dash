@@ -34,10 +34,12 @@ let Sage2View = function(div) {
   }
 
   function updateSAGE2Containers(sage2Data) {
-    self.servers.removeAll();
-    for (let server of Object.values(sage2Data)) {
-      self.servers.push(server);
-    }
+      if (sage2Data[0]) {
+        self.servers.removeAll();
+        for (let server of sage2Data) {
+          self.servers.push(server);
+        }   
+      }
   }
 
   function resize() {

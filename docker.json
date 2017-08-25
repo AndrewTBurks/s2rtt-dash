@@ -1,0 +1,4523 @@
+[
+ {
+  "id": "51213e8abd683e1583fdcab8d5f2fe34d55048aaeac924441a8656e59448fb5a",
+  "name": "sage2-llong4-4K_Lance_Office",
+  "image": "sha256:0221b2dbd953decd1277cddd9cf7248b47c1112cb3a4f23e85f13cad8602a747",
+  "imageID": "sha256:0221b2dbd953decd1277cddd9cf7248b47c1112cb3a4f23e85f13cad8602a747",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1503588883,
+  "state": "running",
+  "ports": [
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1044,
+    "PublicPort": 1044,
+    "Type": "tcp"
+   },
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1043,
+    "PublicPort": 1043,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 443,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 80,
+    "Type": "tcp"
+   }
+  ],
+  "mounts": [
+   {
+    "Name": "fdb1c422820bca06645dbe137d435176d6d5d6444a068865bd9e660f1d0df91d",
+    "Source": "/var/lib/docker/volumes/fdb1c422820bca06645dbe137d435176d6d5d6444a068865bd9e660f1d0df91d/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "aa7696bc6afb3532a24395d94fc1cd1179d57216e72f4d2d139d20ac9bcdbd1f",
+    "Source": "/var/lib/docker/volumes/aa7696bc6afb3532a24395d94fc1cd1179d57216e72f4d2d139d20ac9bcdbd1f/_data",
+    "Destination": "/root/Documents/SAGE2_Media",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "21e8ad8ffd990349282e83834ab2c3413bec1c13508a43146bc98de6361f011f",
+    "Source": "/var/lib/docker/volumes/21e8ad8ffd990349282e83834ab2c3413bec1c13508a43146bc98de6361f011f/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 261705728,
+  "mem_limit": 135087427584,
+  "mem_percent": 0.1937306325840473,
+  "cpu_percent": 0.0019489030609241486,
+  "pids": 10,
+  "netIO": {
+   "rx": 1202999,
+   "tx": 3149046
+  },
+  "blockIO": {
+   "r": 216537088,
+   "w": 1658880
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 19045485537,
+    "percpu_usage": [
+     60141043,
+     80489586,
+     1343976960,
+     489243319,
+     246651891,
+     232593752,
+     1120836689,
+     327923321,
+     116640377,
+     227477451,
+     338912568,
+     606048620,
+     389395015,
+     113520542,
+     100362165,
+     115944697,
+     81755965,
+     5546474251,
+     304582116,
+     237840688,
+     106794848,
+     1393341,
+     44837147,
+     628266255,
+     6819260,
+     4966929443,
+     1121219502,
+     52785063,
+     9162433,
+     18555598,
+     7911631,
+     0
+    ],
+    "usage_in_kernelmode": 3500000000,
+    "usage_in_usermode": 15480000000
+   },
+   "system_cpu_usage": 31271721482904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 19045485537,
+    "percpu_usage": [
+     60141043,
+     80489586,
+     1343976960,
+     489243319,
+     246651891,
+     232593752,
+     1120836689,
+     327923321,
+     116640377,
+     227477451,
+     338912568,
+     606048620,
+     389395015,
+     113520542,
+     100362165,
+     115944697,
+     81755965,
+     5546474251,
+     304582116,
+     237840688,
+     106794848,
+     1393341,
+     44837147,
+     628266255,
+     6819260,
+     4966929443,
+     1121219502,
+     52785063,
+     9162433,
+     18555598,
+     7911631,
+     0
+    ],
+    "usage_in_kernelmode": 3500000000,
+    "usage_in_usermode": 15480000000
+   },
+   "system_cpu_usage": 31271689442904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {
+   "usage": 261705728,
+   "max_usage": 405979136,
+   "stats": {
+    "active_anon": 48283648,
+    "active_file": 34398208,
+    "cache": 213422080,
+    "hierarchical_memory_limit": 9223372036854772000,
+    "hierarchical_memsw_limit": 9223372036854772000,
+    "inactive_anon": 0,
+    "inactive_file": 179023872,
+    "mapped_file": 19902464,
+    "pgfault": 527307,
+    "pgmajfault": 227,
+    "pgpgin": 379222,
+    "pgpgout": 319928,
+    "rss": 48283648,
+    "rss_huge": 6291456,
+    "swap": 0,
+    "total_active_anon": 48283648,
+    "total_active_file": 34398208,
+    "total_cache": 213422080,
+    "total_inactive_anon": 0,
+    "total_inactive_file": 179023872,
+    "total_mapped_file": 19902464,
+    "total_pgfault": 527307,
+    "total_pgmajfault": 227,
+    "total_pgpgin": 379222,
+    "total_pgpgout": 319928,
+    "total_rss": 48283648,
+    "total_rss_huge": 6291456,
+    "total_swap": 0,
+    "total_unevictable": 0,
+    "unevictable": 0
+   },
+   "limit": 135087427584
+  },
+  "networks": {
+   "eth0": {
+    "rx_bytes": 1202999,
+    "rx_packets": 7242,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_bytes": 3149046,
+    "tx_packets": 7222,
+    "tx_errors": 0,
+    "tx_dropped": 0
+   }
+  },
+  "processes": [
+   {
+    "pid_host": "27286",
+    "ppid": "27269",
+    "pgid": "27286",
+    "user": "root",
+    "ruser": "root",
+    "group": "root",
+    "rgroup": "root",
+    "stat": "Ssl",
+    "time": "00:00:02",
+    "elapsed": "1-03:31:00",
+    "nice": "0",
+    "rss": "66308",
+    "vsz": "1525732",
+    "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i"
+   }
+  ]
+ },
+ {
+  "id": "cd2c45f3b0000874a283541ee92b68315a5927765fd04306af66dd80ff89762f",
+  "name": "sage2Data-llong4-4K_Lance_Office",
+  "image": "sha256:0221b2dbd953decd1277cddd9cf7248b47c1112cb3a4f23e85f13cad8602a747",
+  "imageID": "sha256:0221b2dbd953decd1277cddd9cf7248b47c1112cb3a4f23e85f13cad8602a747",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1503588873,
+  "state": "created",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "aa7696bc6afb3532a24395d94fc1cd1179d57216e72f4d2d139d20ac9bcdbd1f",
+    "Source": "/var/lib/docker/volumes/aa7696bc6afb3532a24395d94fc1cd1179d57216e72f4d2d139d20ac9bcdbd1f/_data",
+    "Destination": "/root/Documents/SAGE2_Media",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "21e8ad8ffd990349282e83834ab2c3413bec1c13508a43146bc98de6361f011f",
+    "Source": "/var/lib/docker/volumes/21e8ad8ffd990349282e83834ab2c3413bec1c13508a43146bc98de6361f011f/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "fdb1c422820bca06645dbe137d435176d6d5d6444a068865bd9e660f1d0df91d",
+    "Source": "/var/lib/docker/volumes/fdb1c422820bca06645dbe137d435176d6d5d6444a068865bd9e660f1d0df91d/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "491ed9722ad88b6cd442301af37b631d1d443da0c6a0885e2d391342a8855049",
+  "name": "sage2-aburks-Test",
+  "image": "sage2/master:june2017",
+  "imageID": "sha256:66c7ca3a96dd03f28f781c6b513e0fbb46617439488beab0483ed254417c395b",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1503436239,
+  "state": "running",
+  "ports": [
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1042,
+    "PublicPort": 1042,
+    "Type": "tcp"
+   },
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1041,
+    "PublicPort": 1041,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 443,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 80,
+    "Type": "tcp"
+   }
+  ],
+  "mounts": [
+   {
+    "Name": "e4f6a36d96e15d62ac9558c6aabdbe6c8aef8f62f3a96555a86a569ac2fbd549",
+    "Source": "/var/lib/docker/volumes/e4f6a36d96e15d62ac9558c6aabdbe6c8aef8f62f3a96555a86a569ac2fbd549/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "f478aa013aad182acfcfe597fd130e495f3671663f7dff0cdccf50f24734c45f",
+    "Source": "/var/lib/docker/volumes/f478aa013aad182acfcfe597fd130e495f3671663f7dff0cdccf50f24734c45f/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "bd7fa9749ea95c5e660f7fb6c8844f58b0b3cba4ecc34d4cbb88e9e15dfc137f",
+    "Source": "/var/lib/docker/volumes/bd7fa9749ea95c5e660f7fb6c8844f58b0b3cba4ecc34d4cbb88e9e15dfc137f/_data",
+    "Destination": "/root/Documents/SAGE2_Media",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 168259584,
+  "mem_limit": 135087427584,
+  "mem_percent": 0.124556064919789,
+  "cpu_percent": 0.0011943638193253373,
+  "pids": 10,
+  "netIO": {
+   "rx": 708145,
+   "tx": 2100945
+  },
+  "blockIO": {
+   "r": 127409664,
+   "w": 2179072
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 11671816471,
+    "percpu_usage": [
+     472290527,
+     221791798,
+     75588656,
+     132599315,
+     51207782,
+     441848603,
+     81180842,
+     330367912,
+     104075155,
+     85618567,
+     141309205,
+     288924848,
+     302946063,
+     297969922,
+     397518918,
+     53996727,
+     277414908,
+     2508934078,
+     376202451,
+     28115147,
+     0,
+     0,
+     0,
+     0,
+     0,
+     3471809493,
+     995839866,
+     109189056,
+     349253,
+     69751451,
+     348045367,
+     6930561
+    ],
+    "usage_in_kernelmode": 2840000000,
+    "usage_in_usermode": 8830000000
+   },
+   "system_cpu_usage": 31271721482904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 11671816471,
+    "percpu_usage": [
+     472290527,
+     221791798,
+     75588656,
+     132599315,
+     51207782,
+     441848603,
+     81180842,
+     330367912,
+     104075155,
+     85618567,
+     141309205,
+     288924848,
+     302946063,
+     297969922,
+     397518918,
+     53996727,
+     277414908,
+     2508934078,
+     376202451,
+     28115147,
+     0,
+     0,
+     0,
+     0,
+     0,
+     3471809493,
+     995839866,
+     109189056,
+     349253,
+     69751451,
+     348045367,
+     6930561
+    ],
+    "usage_in_kernelmode": 2840000000,
+    "usage_in_usermode": 8830000000
+   },
+   "system_cpu_usage": 31271689442904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {
+   "usage": 168259584,
+   "max_usage": 394190848,
+   "stats": {
+    "active_anon": 54861824,
+    "active_file": 8970240,
+    "cache": 113397760,
+    "hierarchical_memory_limit": 9223372036854772000,
+    "hierarchical_memsw_limit": 9223372036854772000,
+    "inactive_anon": 0,
+    "inactive_file": 104427520,
+    "mapped_file": 18350080,
+    "pgfault": 315832,
+    "pgmajfault": 112,
+    "pgpgin": 201798,
+    "pgpgout": 162252,
+    "rss": 54861824,
+    "rss_huge": 6291456,
+    "swap": 0,
+    "total_active_anon": 54861824,
+    "total_active_file": 8970240,
+    "total_cache": 113397760,
+    "total_inactive_anon": 0,
+    "total_inactive_file": 104427520,
+    "total_mapped_file": 18350080,
+    "total_pgfault": 315832,
+    "total_pgmajfault": 112,
+    "total_pgpgin": 201798,
+    "total_pgpgout": 162252,
+    "total_rss": 54861824,
+    "total_rss_huge": 6291456,
+    "total_swap": 0,
+    "total_unevictable": 0,
+    "unevictable": 0
+   },
+   "limit": 135087427584
+  },
+  "networks": {
+   "eth0": {
+    "rx_bytes": 708145,
+    "rx_packets": 1298,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_bytes": 2100945,
+    "tx_packets": 1466,
+    "tx_errors": 0,
+    "tx_dropped": 0
+   }
+  },
+  "processes": [
+   {
+    "pid_host": "20791",
+    "ppid": "20773",
+    "pgid": "20791",
+    "user": "root",
+    "ruser": "root",
+    "group": "root",
+    "rgroup": "root",
+    "stat": "Ssl",
+    "time": "00:00:01",
+    "elapsed": "02:37:56",
+    "nice": "0",
+    "rss": "71356",
+    "vsz": "1461728",
+    "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i"
+   }
+  ]
+ },
+ {
+  "id": "55eb165d5ff7635cfcd3ef2e2de205165b54a3dd503f5b6b8c2862f5b8c55d2b",
+  "name": "sage2Data-aburks-Test",
+  "image": "sage2/master:june2017",
+  "imageID": "sha256:66c7ca3a96dd03f28f781c6b513e0fbb46617439488beab0483ed254417c395b",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1503436230,
+  "state": "created",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "f478aa013aad182acfcfe597fd130e495f3671663f7dff0cdccf50f24734c45f",
+    "Source": "/var/lib/docker/volumes/f478aa013aad182acfcfe597fd130e495f3671663f7dff0cdccf50f24734c45f/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "bd7fa9749ea95c5e660f7fb6c8844f58b0b3cba4ecc34d4cbb88e9e15dfc137f",
+    "Source": "/var/lib/docker/volumes/bd7fa9749ea95c5e660f7fb6c8844f58b0b3cba4ecc34d4cbb88e9e15dfc137f/_data",
+    "Destination": "/root/Documents/SAGE2_Media",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "e4f6a36d96e15d62ac9558c6aabdbe6c8aef8f62f3a96555a86a569ac2fbd549",
+    "Source": "/var/lib/docker/volumes/e4f6a36d96e15d62ac9558c6aabdbe6c8aef8f62f3a96555a86a569ac2fbd549/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "4bd299a570bf1994ff84dec100ce496b2c2ae5869ad77a712242abb9820f5ed1",
+  "name": "sage2-andy-AndyRight",
+  "image": "sha256:b2b219f58bd562222d08548c9177938ab9bbfaec6778b9b9a4ba61e3dc7352f5",
+  "imageID": "sha256:b2b219f58bd562222d08548c9177938ab9bbfaec6778b9b9a4ba61e3dc7352f5",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1501864390,
+  "state": "running",
+  "ports": [
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1037,
+    "PublicPort": 1037,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 443,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 80,
+    "Type": "tcp"
+   },
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1038,
+    "PublicPort": 1038,
+    "Type": "tcp"
+   }
+  ],
+  "mounts": [
+   {
+    "Name": "96f564296a0b2b2a14c4e85a7305b543ebb438ea3b6f65161a7ef2e4b1d9ad0e",
+    "Source": "/var/lib/docker/volumes/96f564296a0b2b2a14c4e85a7305b543ebb438ea3b6f65161a7ef2e4b1d9ad0e/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "a1e2edf6e87a393b168f747ef3bbab36f5b4be416ca7a81fea16ba38a6969b60",
+    "Source": "/var/lib/docker/volumes/a1e2edf6e87a393b168f747ef3bbab36f5b4be416ca7a81fea16ba38a6969b60/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "046b987c5187692a3a312371dba6826aaf34e447ea45321720ec2bfdb18d7259",
+    "Source": "/var/lib/docker/volumes/046b987c5187692a3a312371dba6826aaf34e447ea45321720ec2bfdb18d7259/_data",
+    "Destination": "/root/Documents/SAGE2_Media",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 286740480,
+  "mem_limit": 135087427584,
+  "mem_percent": 0.21226289161639353,
+  "cpu_percent": 0.00844939442399571,
+  "pids": 10,
+  "netIO": {
+   "rx": 121199055,
+   "tx": 105426499
+  },
+  "blockIO": {
+   "r": 217466880,
+   "w": 2056192
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 82570971602,
+    "percpu_usage": [
+     1111399108,
+     1820175298,
+     1879595688,
+     1968077551,
+     2849248221,
+     1070438742,
+     986232414,
+     900521039,
+     3418152277,
+     9459420456,
+     9278007461,
+     7807339374,
+     6013486982,
+     6231790812,
+     5475668539,
+     5365694476,
+     6922173,
+     5227675201,
+     179423948,
+     444654442,
+     23932288,
+     184758037,
+     24507774,
+     718582633,
+     251062833,
+     6942889143,
+     1725019821,
+     204028743,
+     169824955,
+     720859129,
+     58434104,
+     53147940
+    ],
+    "usage_in_kernelmode": 9700000000,
+    "usage_in_usermode": 70380000000
+   },
+   "system_cpu_usage": 31271721482904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 82570971602,
+    "percpu_usage": [
+     1111399108,
+     1820175298,
+     1879595688,
+     1968077551,
+     2849248221,
+     1070438742,
+     986232414,
+     900521039,
+     3418152277,
+     9459420456,
+     9278007461,
+     7807339374,
+     6013486982,
+     6231790812,
+     5475668539,
+     5365694476,
+     6922173,
+     5227675201,
+     179423948,
+     444654442,
+     23932288,
+     184758037,
+     24507774,
+     718582633,
+     251062833,
+     6942889143,
+     1725019821,
+     204028743,
+     169824955,
+     720859129,
+     58434104,
+     53147940
+    ],
+    "usage_in_kernelmode": 9700000000,
+    "usage_in_usermode": 70380000000
+   },
+   "system_cpu_usage": 31271689442904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {
+   "usage": 286740480,
+   "max_usage": 424607744,
+   "stats": {
+    "active_anon": 72073216,
+    "active_file": 48648192,
+    "cache": 214667264,
+    "hierarchical_memory_limit": 9223372036854772000,
+    "hierarchical_memsw_limit": 9223372036854772000,
+    "inactive_anon": 0,
+    "inactive_file": 166019072,
+    "mapped_file": 19935232,
+    "pgfault": 2279076,
+    "pgmajfault": 226,
+    "pgpgin": 1804363,
+    "pgpgout": 1749688,
+    "rss": 72073216,
+    "rss_huge": 18874368,
+    "swap": 0,
+    "total_active_anon": 72073216,
+    "total_active_file": 48648192,
+    "total_cache": 214667264,
+    "total_inactive_anon": 0,
+    "total_inactive_file": 166019072,
+    "total_mapped_file": 19935232,
+    "total_pgfault": 2279076,
+    "total_pgmajfault": 226,
+    "total_pgpgin": 1804363,
+    "total_pgpgout": 1749688,
+    "total_rss": 72073216,
+    "total_rss_huge": 18874368,
+    "total_swap": 0,
+    "total_unevictable": 0,
+    "unevictable": 0
+   },
+   "limit": 135087427584
+  },
+  "networks": {
+   "eth0": {
+    "rx_bytes": 121199055,
+    "rx_packets": 182332,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_bytes": 105426499,
+    "tx_packets": 170234,
+    "tx_errors": 0,
+    "tx_dropped": 0
+   }
+  },
+  "processes": [
+   {
+    "pid_host": "24885",
+    "ppid": "24867",
+    "pgid": "24885",
+    "user": "root",
+    "ruser": "root",
+    "group": "root",
+    "rgroup": "root",
+    "stat": "Ssl",
+    "time": "00:01:04",
+    "elapsed": "21-02:40:42",
+    "nice": "0",
+    "rss": "89572",
+    "vsz": "1533364",
+    "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i"
+   }
+  ]
+ },
+ {
+  "id": "cdcf608faf3a96565ac4057c9d84107303a3aa0d308cac4626f2b94be1dca974",
+  "name": "sage2Data-andy-AndyRight",
+  "image": "sha256:b2b219f58bd562222d08548c9177938ab9bbfaec6778b9b9a4ba61e3dc7352f5",
+  "imageID": "sha256:b2b219f58bd562222d08548c9177938ab9bbfaec6778b9b9a4ba61e3dc7352f5",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1501864380,
+  "state": "created",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "96f564296a0b2b2a14c4e85a7305b543ebb438ea3b6f65161a7ef2e4b1d9ad0e",
+    "Source": "/var/lib/docker/volumes/96f564296a0b2b2a14c4e85a7305b543ebb438ea3b6f65161a7ef2e4b1d9ad0e/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "a1e2edf6e87a393b168f747ef3bbab36f5b4be416ca7a81fea16ba38a6969b60",
+    "Source": "/var/lib/docker/volumes/a1e2edf6e87a393b168f747ef3bbab36f5b4be416ca7a81fea16ba38a6969b60/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "046b987c5187692a3a312371dba6826aaf34e447ea45321720ec2bfdb18d7259",
+    "Source": "/var/lib/docker/volumes/046b987c5187692a3a312371dba6826aaf34e447ea45321720ec2bfdb18d7259/_data",
+    "Destination": "/root/Documents/SAGE2_Media",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "1f9e44ad5de31a61e9ca0af84c5c7137d5f43e49d069e166371d1d6ba575f32d",
+  "name": "sage2-andy-AndyLeft",
+  "image": "sha256:b2b219f58bd562222d08548c9177938ab9bbfaec6778b9b9a4ba61e3dc7352f5",
+  "imageID": "sha256:b2b219f58bd562222d08548c9177938ab9bbfaec6778b9b9a4ba61e3dc7352f5",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1501864354,
+  "state": "running",
+  "ports": [
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1036,
+    "PublicPort": 1036,
+    "Type": "tcp"
+   },
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1035,
+    "PublicPort": 1035,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 443,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 80,
+    "Type": "tcp"
+   }
+  ],
+  "mounts": [
+   {
+    "Name": "fe08b5d0d042b5528add69a3491c7b691d79afdb33682e6564fab00d85f02843",
+    "Source": "/var/lib/docker/volumes/fe08b5d0d042b5528add69a3491c7b691d79afdb33682e6564fab00d85f02843/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "5962544a8b91817b23f7df0d602d6b6fd01951f9c866151793ae9451ae1d4a17",
+    "Source": "/var/lib/docker/volumes/5962544a8b91817b23f7df0d602d6b6fd01951f9c866151793ae9451ae1d4a17/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "e787406da1e6e134beb1094f3cd65943c62511e5a52c887c5c4790385897ee3c",
+    "Source": "/var/lib/docker/volumes/e787406da1e6e134beb1094f3cd65943c62511e5a52c887c5c4790385897ee3c/_data",
+    "Destination": "/root/Documents/SAGE2_Media",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 305516544,
+  "mem_limit": 135087427584,
+  "mem_percent": 0.2261620858906532,
+  "cpu_percent": 2.8485888247588957,
+  "pids": 10,
+  "netIO": {
+   "rx": 15012183630,
+   "tx": 19801541956
+  },
+  "blockIO": {
+   "r": 215984128,
+   "w": 2011136
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 27837586358492,
+    "percpu_usage": [
+     1565000515568,
+     2471196544605,
+     2373716820928,
+     2128288474808,
+     2859245685049,
+     3124424371362,
+     3086267715026,
+     2738450288396,
+     373176990042,
+     647870695650,
+     1228570711545,
+     693005036092,
+     949410263148,
+     734303025113,
+     567672858281,
+     392016073382,
+     57343839730,
+     201576819149,
+     68504190814,
+     69500347266,
+     50599987794,
+     55806762481,
+     139844429458,
+     1076222624261,
+     68082883685,
+     13164881166,
+     17723939539,
+     15732142767,
+     23259041612,
+     18260593181,
+     19732927521,
+     9614879073
+    ],
+    "usage_in_kernelmode": 2000690000000,
+    "usage_in_usermode": 36634540000000
+   },
+   "system_cpu_usage": 31271721482904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 27837570488883,
+    "percpu_usage": [
+     1565000374901,
+     2471196544605,
+     2373716820928,
+     2128288474808,
+     2859245685049,
+     3124424371362,
+     3086267715026,
+     2738450288396,
+     373176990042,
+     647870695650,
+     1228570711545,
+     693005036092,
+     949410263148,
+     734303025113,
+     567672858281,
+     392016073382,
+     57343839730,
+     201576819149,
+     68504190814,
+     69500347266,
+     50599987794,
+     55806762481,
+     139844429458,
+     1076206895319,
+     68082883685,
+     13164881166,
+     17723939539,
+     15732142767,
+     23259041612,
+     18260593181,
+     19732927521,
+     9614879073
+    ],
+    "usage_in_kernelmode": 2000690000000,
+    "usage_in_usermode": 36634510000000
+   },
+   "system_cpu_usage": 31271689442904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {
+   "usage": 305516544,
+   "max_usage": 455536640,
+   "stats": {
+    "active_anon": 92360704,
+    "active_file": 46088192,
+    "cache": 213131264,
+    "hierarchical_memory_limit": 9223372036854772000,
+    "hierarchical_memsw_limit": 9223372036854772000,
+    "inactive_anon": 0,
+    "inactive_file": 167043072,
+    "mapped_file": 19906560,
+    "pgfault": 241790315,
+    "pgmajfault": 226,
+    "pgpgin": 207101899,
+    "pgpgout": 207046730,
+    "rss": 92377088,
+    "rss_huge": 52428800,
+    "swap": 0,
+    "total_active_anon": 92360704,
+    "total_active_file": 46088192,
+    "total_cache": 213131264,
+    "total_inactive_anon": 0,
+    "total_inactive_file": 167043072,
+    "total_mapped_file": 19906560,
+    "total_pgfault": 241790315,
+    "total_pgmajfault": 226,
+    "total_pgpgin": 207101899,
+    "total_pgpgout": 207046730,
+    "total_rss": 92377088,
+    "total_rss_huge": 52428800,
+    "total_swap": 0,
+    "total_unevictable": 0,
+    "unevictable": 0
+   },
+   "limit": 135087427584
+  },
+  "networks": {
+   "eth0": {
+    "rx_bytes": 15012183630,
+    "rx_packets": 91327162,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_bytes": 19801541956,
+    "tx_packets": 53080218,
+    "tx_errors": 0,
+    "tx_dropped": 0
+   }
+  },
+  "processes": [
+   {
+    "pid_host": "23421",
+    "ppid": "23404",
+    "pgid": "23421",
+    "user": "root",
+    "ruser": "root",
+    "group": "root",
+    "rgroup": "root",
+    "stat": "Ssl",
+    "time": "07:43:40",
+    "elapsed": "21-02:41:17",
+    "nice": "0",
+    "rss": "109472",
+    "vsz": "1561032",
+    "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i"
+   }
+  ]
+ },
+ {
+  "id": "00b61d6f2b7b4c482d67860e89c29949a39b059b1bc0d05f375d4728ae137b4e",
+  "name": "sage2Data-andy-AndyLeft",
+  "image": "sha256:b2b219f58bd562222d08548c9177938ab9bbfaec6778b9b9a4ba61e3dc7352f5",
+  "imageID": "sha256:b2b219f58bd562222d08548c9177938ab9bbfaec6778b9b9a4ba61e3dc7352f5",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1501864345,
+  "state": "created",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "e787406da1e6e134beb1094f3cd65943c62511e5a52c887c5c4790385897ee3c",
+    "Source": "/var/lib/docker/volumes/e787406da1e6e134beb1094f3cd65943c62511e5a52c887c5c4790385897ee3c/_data",
+    "Destination": "/root/Documents/SAGE2_Media",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "fe08b5d0d042b5528add69a3491c7b691d79afdb33682e6564fab00d85f02843",
+    "Source": "/var/lib/docker/volumes/fe08b5d0d042b5528add69a3491c7b691d79afdb33682e6564fab00d85f02843/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "5962544a8b91817b23f7df0d602d6b6fd01951f9c866151793ae9451ae1d4a17",
+    "Source": "/var/lib/docker/volumes/5962544a8b91817b23f7df0d602d6b6fd01951f9c866151793ae9451ae1d4a17/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "17d0630e64ced821c1cc1698bee3d05901f9ef78bb988c0a0e27787c6050496b",
+  "name": "sage2-luc-Slideshow",
+  "image": "sage2/master:july2017",
+  "imageID": "sha256:f1a93eac5f42ad977bc063a39bd3670d6c75194422077a97f01ee2f66b0f7347",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1501791042,
+  "state": "running",
+  "ports": [
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1026,
+    "PublicPort": 1026,
+    "Type": "tcp"
+   },
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1025,
+    "PublicPort": 1025,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 443,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 80,
+    "Type": "tcp"
+   }
+  ],
+  "mounts": [
+   {
+    "Name": "be33a7185f70e4157f05a53863c41b543a3f5a37127d8c35e69c68f6eabc2e45",
+    "Source": "/var/lib/docker/volumes/be33a7185f70e4157f05a53863c41b543a3f5a37127d8c35e69c68f6eabc2e45/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "682fe2de0d597931eaf24a8226a3b65f73e92633146bb91fedc5e65865254c3d",
+    "Source": "/var/lib/docker/volumes/682fe2de0d597931eaf24a8226a3b65f73e92633146bb91fedc5e65865254c3d/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "7db18eada4df6445f3c75f9c79841b2f8cf5517ca7138e0b277e1007cdfa0f14",
+    "Source": "/var/lib/docker/volumes/7db18eada4df6445f3c75f9c79841b2f8cf5517ca7138e0b277e1007cdfa0f14/_data",
+    "Destination": "/sage2/uploads",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 191811584,
+  "mem_limit": 135087427584,
+  "mem_percent": 0.14199069997148905,
+  "cpu_percent": 3.650495408272573,
+  "pids": 10,
+  "netIO": {
+   "rx": 11408707295,
+   "tx": 120376626184
+  },
+  "blockIO": {
+   "r": 143267840,
+   "w": 10272768
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 35674148650663,
+    "percpu_usage": [
+     1602610012445,
+     2959648656741,
+     2966695857188,
+     2523581553749,
+     3819096912971,
+     4389201135763,
+     4088952200914,
+     3847421898839,
+     419728771788,
+     803888848777,
+     1431594369204,
+     812972875630,
+     1118173219968,
+     881797280208,
+     665673556036,
+     448009646920,
+     88591813271,
+     269970555295,
+     111975610493,
+     99743184019,
+     80625914247,
+     111349912864,
+     131458384157,
+     1798827998171,
+     71172900615,
+     18791527345,
+     18511574626,
+     17625985029,
+     20472515500,
+     19405155583,
+     24130356959,
+     12448465348
+    ],
+    "usage_in_kernelmode": 2025420000000,
+    "usage_in_usermode": 48520120000000
+   },
+   "system_cpu_usage": 31271721482904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 35674131790644,
+    "percpu_usage": [
+     1602610012445,
+     2959631940828,
+     2966695857188,
+     2523581553749,
+     3819096912971,
+     4389200991657,
+     4088952200914,
+     3847421898839,
+     419728771788,
+     803888848777,
+     1431594369204,
+     812972875630,
+     1118173219968,
+     881797280208,
+     665673556036,
+     448009646920,
+     88591813271,
+     269970555295,
+     111975610493,
+     99743184019,
+     80625914247,
+     111349912864,
+     131458384157,
+     1798827998171,
+     71172900615,
+     18791527345,
+     18511574626,
+     17625985029,
+     20472515500,
+     19405155583,
+     24130356959,
+     12448465348
+    ],
+    "usage_in_kernelmode": 2025420000000,
+    "usage_in_usermode": 48520100000000
+   },
+   "system_cpu_usage": 31271689442904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {
+   "usage": 191811584,
+   "max_usage": 407658496,
+   "stats": {
+    "active_anon": 90505216,
+    "active_file": 21446656,
+    "cache": 101134336,
+    "hierarchical_memory_limit": 9223372036854772000,
+    "hierarchical_memsw_limit": 9223372036854772000,
+    "inactive_anon": 0,
+    "inactive_file": 79687680,
+    "mapped_file": 19869696,
+    "pgfault": 254133634,
+    "pgmajfault": 484,
+    "pgpgin": 216390070,
+    "pgpgout": 216367288,
+    "rss": 90554368,
+    "rss_huge": 37748736,
+    "swap": 0,
+    "total_active_anon": 90505216,
+    "total_active_file": 21446656,
+    "total_cache": 101134336,
+    "total_inactive_anon": 0,
+    "total_inactive_file": 79687680,
+    "total_mapped_file": 19869696,
+    "total_pgfault": 254133634,
+    "total_pgmajfault": 484,
+    "total_pgpgin": 216390070,
+    "total_pgpgout": 216367288,
+    "total_rss": 90554368,
+    "total_rss_huge": 37748736,
+    "total_swap": 0,
+    "total_unevictable": 0,
+    "unevictable": 0
+   },
+   "limit": 135087427584
+  },
+  "networks": {
+   "eth0": {
+    "rx_bytes": 11408707295,
+    "rx_packets": 125278541,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_bytes": 120376626184,
+    "tx_packets": 66045433,
+    "tx_errors": 0,
+    "tx_dropped": 0
+   }
+  },
+  "processes": [
+   {
+    "pid_host": "24730",
+    "ppid": "24712",
+    "pgid": "24730",
+    "user": "root",
+    "ruser": "root",
+    "group": "root",
+    "rgroup": "root",
+    "stat": "Ssl",
+    "time": "09:54:22",
+    "elapsed": "21-22:59:46",
+    "nice": "0",
+    "rss": "107608",
+    "vsz": "1558868",
+    "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i"
+   }
+  ]
+ },
+ {
+  "id": "c11ad2ce148a7c7823d953fe0e3d111256e36be2fd1d9679c41b210097f69a1f",
+  "name": "dreamy_lovelace",
+  "image": "sha256:d103bce93dcbad8c3548feeb4cf5cf027f76427ad18768b698b15dc20ec3f517",
+  "imageID": "sha256:d103bce93dcbad8c3548feeb4cf5cf027f76427ad18768b698b15dc20ec3f517",
+  "command": "/bin/bash",
+  "created": 1501272107,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "350d002ffb976923dcdcef0dc9170167888854a2b5697e64bd51a86cb6dd2769",
+  "name": "quizzical_lalande",
+  "image": "sha256:104d5f91796e51aa218a4ca0de7faaa316a5bca20478addcf548f713331a53a9",
+  "imageID": "sha256:104d5f91796e51aa218a4ca0de7faaa316a5bca20478addcf548f713331a53a9",
+  "command": "/bin/bash",
+  "created": 1501270458,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "c1825f43577ddf52e7bf087ae9718b2279668bdce37b6723f882f2e3b34a6454",
+  "name": "focused_blackwell",
+  "image": "sha256:104d5f91796e51aa218a4ca0de7faaa316a5bca20478addcf548f713331a53a9",
+  "imageID": "sha256:104d5f91796e51aa218a4ca0de7faaa316a5bca20478addcf548f713331a53a9",
+  "command": "/bin/bash",
+  "created": 1501270407,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "5e12c31834e2f12a606fed34c798aa5f05096e2037989228960df9ec755d3773",
+  "name": "competent_varahamihira",
+  "image": "sha256:104d5f91796e51aa218a4ca0de7faaa316a5bca20478addcf548f713331a53a9",
+  "imageID": "sha256:104d5f91796e51aa218a4ca0de7faaa316a5bca20478addcf548f713331a53a9",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1501270400,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "1683545d1bdbff11d7df1f6ab9a5ed04b09f419683a70c47acf9ac1972cd3f1a",
+  "name": "sage2-hnaik-naiki",
+  "image": "sage2/master:june2017",
+  "imageID": "sha256:66c7ca3a96dd03f28f781c6b513e0fbb46617439488beab0483ed254417c395b",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1498783792,
+  "state": "exited",
+  "ports": [],
+  "mounts": [
+   {
+    "Name": "13042d672e008627a0972f8f7c649170ec6c7a81ae1cef367f3303a13632c570",
+    "Source": "/var/lib/docker/volumes/13042d672e008627a0972f8f7c649170ec6c7a81ae1cef367f3303a13632c570/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "b67ae4b282f0006db1e6f6e4003ea9485a9c6657632eb9287164a27813e76108",
+    "Source": "/var/lib/docker/volumes/b67ae4b282f0006db1e6f6e4003ea9485a9c6657632eb9287164a27813e76108/_data",
+    "Destination": "/sage2/uploads",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "cff23d2f65528e581d2c70ce545ea72b4f60c5b18be9a57fdf2cfc5cb8170f39",
+    "Source": "/var/lib/docker/volumes/cff23d2f65528e581d2c70ce545ea72b4f60c5b18be9a57fdf2cfc5cb8170f39/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "b7a3d60ecdf38015d3d29e93ac5a3872a879b079dcbe9f6ab4a2b81c3dbbe41a",
+  "name": "sage2Data-hnaik-naiki",
+  "image": "sage2/master:june2017",
+  "imageID": "sha256:66c7ca3a96dd03f28f781c6b513e0fbb46617439488beab0483ed254417c395b",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1498783782,
+  "state": "created",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "cff23d2f65528e581d2c70ce545ea72b4f60c5b18be9a57fdf2cfc5cb8170f39",
+    "Source": "/var/lib/docker/volumes/cff23d2f65528e581d2c70ce545ea72b4f60c5b18be9a57fdf2cfc5cb8170f39/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "13042d672e008627a0972f8f7c649170ec6c7a81ae1cef367f3303a13632c570",
+    "Source": "/var/lib/docker/volumes/13042d672e008627a0972f8f7c649170ec6c7a81ae1cef367f3303a13632c570/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "b67ae4b282f0006db1e6f6e4003ea9485a9c6657632eb9287164a27813e76108",
+    "Source": "/var/lib/docker/volumes/b67ae4b282f0006db1e6f6e4003ea9485a9c6657632eb9287164a27813e76108/_data",
+    "Destination": "/sage2/uploads",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "6fc47a94d71454327e9fffc3385a9679907a2c315d002141d62bd7d59d18294e",
+  "name": "sage2-kenyon-test",
+  "image": "sage2/master:june2017",
+  "imageID": "sha256:66c7ca3a96dd03f28f781c6b513e0fbb46617439488beab0483ed254417c395b",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1498750148,
+  "state": "running",
+  "ports": [
+   {
+    "PrivatePort": 443,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 80,
+    "Type": "tcp"
+   },
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1032,
+    "PublicPort": 1032,
+    "Type": "tcp"
+   },
+   {
+    "IP": "0.0.0.0",
+    "PrivatePort": 1031,
+    "PublicPort": 1031,
+    "Type": "tcp"
+   }
+  ],
+  "mounts": [
+   {
+    "Name": "ea739e7224ac63786a58c9f0e3578c214ede384a45451549302dbdb4401c3578",
+    "Source": "/var/lib/docker/volumes/ea739e7224ac63786a58c9f0e3578c214ede384a45451549302dbdb4401c3578/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "92e9d54ac250d330d84213a4d10de63b4141ecf777e4553883f51d0ef055be16",
+    "Source": "/var/lib/docker/volumes/92e9d54ac250d330d84213a4d10de63b4141ecf777e4553883f51d0ef055be16/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Name": "69e7060bbfb4b87f182b0c935a31c32456a30bde1f01785de9a9972aaa8fff26",
+    "Source": "/var/lib/docker/volumes/69e7060bbfb4b87f182b0c935a31c32456a30bde1f01785de9a9972aaa8fff26/_data",
+    "Destination": "/sage2/uploads",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 449916928,
+  "mem_limit": 135087427584,
+  "mem_percent": 0.33305610747545905,
+  "cpu_percent": 0.004741331141090378,
+  "pids": 58,
+  "netIO": {
+   "rx": 167786525,
+   "tx": 731022419
+  },
+  "blockIO": {
+   "r": 193748992,
+   "w": 6180864
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 46334245907,
+    "percpu_usage": [
+     917434694,
+     306951247,
+     952864059,
+     666794561,
+     529708257,
+     708374024,
+     556886487,
+     1357654819,
+     4448064925,
+     1947633188,
+     3366675921,
+     3659734883,
+     4543364626,
+     2003624220,
+     2332707757,
+     2856676423,
+     0,
+     4149920308,
+     1221041900,
+     169749950,
+     274408784,
+     4516420,
+     9983571,
+     4444869,
+     32673166,
+     5170206663,
+     847212978,
+     114771218,
+     565718038,
+     815502962,
+     1082628252,
+     716316737
+    ],
+    "usage_in_kernelmode": 5650000000,
+    "usage_in_usermode": 36950000000
+   },
+   "system_cpu_usage": 31271721482904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 46334245907,
+    "percpu_usage": [
+     917434694,
+     306951247,
+     952864059,
+     666794561,
+     529708257,
+     708374024,
+     556886487,
+     1357654819,
+     4448064925,
+     1947633188,
+     3366675921,
+     3659734883,
+     4543364626,
+     2003624220,
+     2332707757,
+     2856676423,
+     0,
+     4149920308,
+     1221041900,
+     169749950,
+     274408784,
+     4516420,
+     9983571,
+     4444869,
+     32673166,
+     5170206663,
+     847212978,
+     114771218,
+     565718038,
+     815502962,
+     1082628252,
+     716316737
+    ],
+    "usage_in_kernelmode": 5650000000,
+    "usage_in_usermode": 36950000000
+   },
+   "system_cpu_usage": 31271689442904484,
+   "online_cpus": 32,
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {
+   "usage": 449916928,
+   "max_usage": 533884928,
+   "stats": {
+    "active_anon": 259112960,
+    "active_file": 34021376,
+    "cache": 190803968,
+    "hierarchical_memory_limit": 9223372036854772000,
+    "hierarchical_memsw_limit": 9223372036854772000,
+    "inactive_anon": 0,
+    "inactive_file": 156782592,
+    "mapped_file": 20647936,
+    "pgfault": 874984,
+    "pgmajfault": 202,
+    "pgpgin": 620702,
+    "pgpgout": 557871,
+    "rss": 259112960,
+    "rss_huge": 186646528,
+    "swap": 0,
+    "total_active_anon": 259112960,
+    "total_active_file": 34021376,
+    "total_cache": 190803968,
+    "total_inactive_anon": 0,
+    "total_inactive_file": 156782592,
+    "total_mapped_file": 20647936,
+    "total_pgfault": 874984,
+    "total_pgmajfault": 202,
+    "total_pgpgin": 620702,
+    "total_pgpgout": 557871,
+    "total_rss": 259112960,
+    "total_rss_huge": 186646528,
+    "total_swap": 0,
+    "total_unevictable": 0,
+    "unevictable": 0
+   },
+   "limit": 135087427584
+  },
+  "networks": {
+   "eth0": {
+    "rx_bytes": 167786525,
+    "rx_packets": 125035,
+    "rx_errors": 0,
+    "rx_dropped": 0,
+    "tx_bytes": 731022419,
+    "tx_packets": 98044,
+    "tx_errors": 0,
+    "tx_dropped": 0
+   }
+  },
+  "processes": [
+   {
+    "pid_host": "21236",
+    "ppid": "21219",
+    "pgid": "21236",
+    "user": "root",
+    "ruser": "root",
+    "group": "root",
+    "rgroup": "root",
+    "stat": "Ssl",
+    "time": "00:00:30",
+    "elapsed": "57-03:51:56",
+    "nice": "0",
+    "rss": "270076",
+    "vsz": "5003952",
+    "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i"
+   }
+  ]
+ },
+ {
+  "id": "77c075fb2bec893f76811d6c4b58895bb706477fbf554e31ad1233cb141ba374",
+  "name": "sage2Data-kenyon-test",
+  "image": "sage2/master:june2017",
+  "imageID": "sha256:66c7ca3a96dd03f28f781c6b513e0fbb46617439488beab0483ed254417c395b",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1498750139,
+  "state": "created",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "ea739e7224ac63786a58c9f0e3578c214ede384a45451549302dbdb4401c3578",
+    "Source": "/var/lib/docker/volumes/ea739e7224ac63786a58c9f0e3578c214ede384a45451549302dbdb4401c3578/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "92e9d54ac250d330d84213a4d10de63b4141ecf777e4553883f51d0ef055be16",
+    "Source": "/var/lib/docker/volumes/92e9d54ac250d330d84213a4d10de63b4141ecf777e4553883f51d0ef055be16/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "69e7060bbfb4b87f182b0c935a31c32456a30bde1f01785de9a9972aaa8fff26",
+    "Source": "/var/lib/docker/volumes/69e7060bbfb4b87f182b0c935a31c32456a30bde1f01785de9a9972aaa8fff26/_data",
+    "Destination": "/sage2/uploads",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "820e74301e4d340838f378977c1edd54b5adf5e5a8048d2dcc619f20c0ca383f",
+  "name": "sage2Data-luc-Slideshow",
+  "image": "sage2/master:june2017",
+  "imageID": "sha256:66c7ca3a96dd03f28f781c6b513e0fbb46617439488beab0483ed254417c395b",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1497993433,
+  "state": "created",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "7db18eada4df6445f3c75f9c79841b2f8cf5517ca7138e0b277e1007cdfa0f14",
+    "Source": "/var/lib/docker/volumes/7db18eada4df6445f3c75f9c79841b2f8cf5517ca7138e0b277e1007cdfa0f14/_data",
+    "Destination": "/sage2/uploads",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "be33a7185f70e4157f05a53863c41b543a3f5a37127d8c35e69c68f6eabc2e45",
+    "Source": "/var/lib/docker/volumes/be33a7185f70e4157f05a53863c41b543a3f5a37127d8c35e69c68f6eabc2e45/_data",
+    "Destination": "/sage2/config",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   },
+   {
+    "Type": "volume",
+    "Name": "682fe2de0d597931eaf24a8226a3b65f73e92633146bb91fedc5e65865254c3d",
+    "Source": "/var/lib/docker/volumes/682fe2de0d597931eaf24a8226a3b65f73e92633146bb91fedc5e65865254c3d/_data",
+    "Destination": "/sage2/keys",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "df2d9e0c65655641ea14bf0cebfca05374fce1bac5ba7364cd224821c46e9d1a",
+  "name": "eager_bartik",
+  "image": "sage2/master:june2017",
+  "imageID": "sha256:66c7ca3a96dd03f28f781c6b513e0fbb46617439488beab0483ed254417c395b",
+  "command": "bash",
+  "created": 1497992502,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "4121a0f6d434c14ba00dc6929b28ce523e4a670e054ec0314f7a8ab097db2057",
+  "name": "goofy_keller",
+  "image": "sage2/master:june2017",
+  "imageID": "sha256:66c7ca3a96dd03f28f781c6b513e0fbb46617439488beab0483ed254417c395b",
+  "command": "bash",
+  "created": 1497992392,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "6d78610b15597e04c2a4850eee7a352e0c0c9ec9218db10930ec8a0cc594e619",
+  "name": "determined_raman",
+  "image": "sage2/master:june2017",
+  "imageID": "sha256:66c7ca3a96dd03f28f781c6b513e0fbb46617439488beab0483ed254417c395b",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1497992387,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "79632515e116cc69680335e754757072ee21da6460fd5366e53f66c0c997fb51",
+  "name": "elegant_wing",
+  "image": "sha256:a44a30bda12329d851c43240f53e2e723fd62079c388faf155b5c13b0736539e",
+  "imageID": "sha256:a44a30bda12329d851c43240f53e2e723fd62079c388faf155b5c13b0736539e",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1497991617,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "27fbb000e99593732cfdc0ecc20cbf67545469b50c9cdf092454ad49b3538c0e",
+  "name": "lucid_visvesvaraya",
+  "image": "sha256:a44a30bda12329d851c43240f53e2e723fd62079c388faf155b5c13b0736539e",
+  "imageID": "sha256:a44a30bda12329d851c43240f53e2e723fd62079c388faf155b5c13b0736539e",
+  "command": "bash",
+  "created": 1497991611,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "083b7c4c9f9ea91a5c999112fc6c1a4f3780fafe41899e6e12d5e490ace6f47f",
+  "name": "peaceful_torvalds",
+  "image": "sha256:a44a30bda12329d851c43240f53e2e723fd62079c388faf155b5c13b0736539e",
+  "imageID": "sha256:a44a30bda12329d851c43240f53e2e723fd62079c388faf155b5c13b0736539e",
+  "command": "bash",
+  "created": 1497991590,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "e98238bed8f0db593dfb19f66daeb70abdd2c0f0eb8eb12ca1dd70dd9887120e",
+  "name": "unruffled_hypatia",
+  "image": "sha256:19b3f125087f5c2bf47bb527ccfa79df3a56ebc6487e6898ce6f6803ef57f378",
+  "imageID": "sha256:19b3f125087f5c2bf47bb527ccfa79df3a56ebc6487e6898ce6f6803ef57f378",
+  "command": "bash",
+  "created": 1497990440,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "bf5beb1e15ae4c2372484a00a2c1a8276adcba1477f6e1766070680a7b43fc23",
+  "name": "upbeat_lamarr",
+  "image": "sha256:19b3f125087f5c2bf47bb527ccfa79df3a56ebc6487e6898ce6f6803ef57f378",
+  "imageID": "sha256:19b3f125087f5c2bf47bb527ccfa79df3a56ebc6487e6898ce6f6803ef57f378",
+  "command": "bash",
+  "created": 1497990380,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "0310d76fd143dd666cd02481c952e72ecb57348ec6f8da13b3ea920f2cc9c343",
+  "name": "hardcore_turing",
+  "image": "sha256:19b3f125087f5c2bf47bb527ccfa79df3a56ebc6487e6898ce6f6803ef57f378",
+  "imageID": "sha256:19b3f125087f5c2bf47bb527ccfa79df3a56ebc6487e6898ce6f6803ef57f378",
+  "command": "nodejs /sage2/server.js -f /sage2/config/docker-cfg.json -i",
+  "created": 1497990373,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "d6ad1eff50637e63f69d43e620a81c4ae29d9652b4875502cef4bd75ce159a4d",
+  "name": "friendly_lamport",
+  "image": "sha256:19b3f125087f5c2bf47bb527ccfa79df3a56ebc6487e6898ce6f6803ef57f378",
+  "imageID": "sha256:19b3f125087f5c2bf47bb527ccfa79df3a56ebc6487e6898ce6f6803ef57f378",
+  "command": "node server.js",
+  "created": 1497990356,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "4aaa6632f4612c29b73c1d9571289b0bc22c74d55bcfd8661b774b7be0775f5d",
+  "name": "jovial_heisenberg",
+  "image": "sha256:19b3f125087f5c2bf47bb527ccfa79df3a56ebc6487e6898ce6f6803ef57f378",
+  "imageID": "sha256:19b3f125087f5c2bf47bb527ccfa79df3a56ebc6487e6898ce6f6803ef57f378",
+  "command": "date",
+  "created": 1497990298,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "fb5e703582d6d036d191ada04c1c3f02c4fbc01d489001d8e3fe8bc8e2454cf2",
+  "name": "affectionate_noether",
+  "image": "tensorflow/tensorflow:latest-gpu",
+  "imageID": "sha256:ede52c2645b276f5826b0e4fca5842690dd57052a0aecd47fa19eb930e12c2ec",
+  "command": "/run_jupyter.sh",
+  "created": 1495823421,
+  "state": "exited",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "nvidia_driver_375.26",
+    "Source": "/var/lib/nvidia-docker/volumes/nvidia_driver/375.26",
+    "Destination": "/usr/local/nvidia",
+    "Driver": "nvidia-docker",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "2e6e0864c301336fdc580b65e728365d4997a67486222f70580358bd5dbc1217",
+  "name": "frosty_colden",
+  "image": "tensorflow/tensorflow:latest-gpu",
+  "imageID": "sha256:ede52c2645b276f5826b0e4fca5842690dd57052a0aecd47fa19eb930e12c2ec",
+  "command": "/run_jupyter.sh",
+  "created": 1495823310,
+  "state": "exited",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "nvidia_driver_375.26",
+    "Source": "/var/lib/nvidia-docker/volumes/nvidia_driver/375.26",
+    "Destination": "/usr/local/nvidia",
+    "Driver": "nvidia-docker",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "58345557a54fc24f3ee5b56e115f1c5b030aa8a425f63b46fe607b43d27a1c48",
+  "name": "brave_fermat",
+  "image": "tensorflow/tensorflow:latest-gpu",
+  "imageID": "sha256:ede52c2645b276f5826b0e4fca5842690dd57052a0aecd47fa19eb930e12c2ec",
+  "command": "/run_jupyter.sh",
+  "created": 1495823241,
+  "state": "exited",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "nvidia_driver_375.26",
+    "Source": "/var/lib/nvidia-docker/volumes/nvidia_driver/375.26",
+    "Destination": "/usr/local/nvidia",
+    "Driver": "nvidia-docker",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "ebb06aee83136b151b6a26c702a10157a885fd24248aaf2c6db7577c7ce65816",
+  "name": "loving_poincare",
+  "image": "tensorflow/tensorflow:latest-gpu",
+  "imageID": "sha256:ede52c2645b276f5826b0e4fca5842690dd57052a0aecd47fa19eb930e12c2ec",
+  "command": "/run_jupyter.sh",
+  "created": 1495823228,
+  "state": "created",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "nvidia_driver_375.26",
+    "Source": "/var/lib/nvidia-docker/volumes/nvidia_driver/375.26",
+    "Destination": "/usr/local/nvidia",
+    "Driver": "nvidia-docker",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "0be8ca56e9db4d639253db8d358e4c0b2583d1a5dbb8d0477820a3f82bf17757",
+  "name": "gallant_yalow",
+  "image": "tensorflow/magenta",
+  "imageID": "sha256:aeb1228e51cdf0503b735d28c186e5e90d0a95cbabccbb4feda76464f1ecbbae",
+  "command": "bash",
+  "created": 1493964518,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "62ca0543eb8a8158c74b371aaa9fb809bac9c85ffd79f05114e7ba64b66ab520",
+  "name": "blissful_panini",
+  "image": "ubuntu",
+  "imageID": "sha256:f7b3f317ec734a73deca91b34c2b1e3dd7454650da9c8ef3047d29a873865178",
+  "command": "bash",
+  "created": 1493320984,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "88ef78a623b3647f8d4f22335ee30c2e57718c585db4bc236db76a9c50338a60",
+  "name": "gallant_montalcini",
+  "image": "tensorflow/tensorflow",
+  "imageID": "sha256:2c520a260ba93dbc1cc8fc89bb5760120e0c403ec15d3e2c2686254898b9bd0c",
+  "command": "/run_jupyter.sh --allow-root",
+  "created": 1492552372,
+  "state": "exited",
+  "ports": [
+   {
+    "PrivatePort": 8888,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 6006,
+    "Type": "tcp"
+   }
+  ],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "481426b55df1aa65e6b48a5ec7b2262aa63dda78ca70667ccedd185d1b9c7c69",
+  "name": "compassionate_dijkstra",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "bash",
+  "created": 1492113436,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "1c0cc353e46a2170307d94268d018974537ba992a3e3e5374ad19bb178012874",
+  "name": "mystifying_goldwasser",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "date",
+  "created": 1492113424,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "4a5f08dfd8071357e4ca8d955169e029cb219dd09bcc7011c91f3be28f0aa361",
+  "name": "upbeat_pasteur",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "bash",
+  "created": 1492113181,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "7b36859ed67ab764812f4d3c90551342fd22d6dbaa47dc455200ee803cc5393d",
+  "name": "epic_mayer",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "bash",
+  "created": 1492113176,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "af3c1242a431a31987ae7d792e325d2c37c49821c0872812975c05d3b2c76936",
+  "name": "goofy_snyder",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "bash",
+  "created": 1492113167,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "fa79ff5ed23ee44e6f50c5dcb858d57409aeca2662f86c3aeb3163e02bc21f2a",
+  "name": "focused_babbage",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "bash",
+  "created": 1492113154,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "382ae5c373a53f5b662d84e67f2f2e7f06d0d508a3aa9e1f5da5dc4f08af5903",
+  "name": "competent_ramanujan",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "bash",
+  "created": 1492113135,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "c336e712a9cb5e45c2f2b673dbfb466fa7c9237151c2ec52efad94c248421a11",
+  "name": "fervent_wright",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "bash",
+  "created": 1492113126,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "dc0d8f9aef25590fa848b5aae8890b5f409347e88c4d4e466d976d7200f68033",
+  "name": "focused_kalam",
+  "image": "centos",
+  "imageID": "sha256:a8493f5f50ffda70c2eeb2d09090debf7d39c8ffcd63b43ff81b111ece6f28bf",
+  "command": "bash",
+  "created": 1492113117,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "744e41f4972a822bdeffed120f407c12ab6ff99d160a475e849b45baf7e9c655",
+  "name": "wizardly_feynman",
+  "image": "centos",
+  "imageID": "sha256:a8493f5f50ffda70c2eeb2d09090debf7d39c8ffcd63b43ff81b111ece6f28bf",
+  "command": "bash",
+  "created": 1492113082,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "e4708a04425d6b29716ef6169cd3f23dfaf3c9c5a6d96b1feffe2ed521b56b18",
+  "name": "thirsty_kalam",
+  "image": "centos",
+  "imageID": "sha256:a8493f5f50ffda70c2eeb2d09090debf7d39c8ffcd63b43ff81b111ece6f28bf",
+  "command": "bash",
+  "created": 1492113071,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "a8b604656949b87f91a30d338c49e1341d682e77daa12f1d8f953f5b4c28483e",
+  "name": "flamboyant_gates",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "bash",
+  "created": 1492113054,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "a0970ba2c379fc0ebe0021ea95d99a39bbda03d1ae31e020e27afc15fa2d9333",
+  "name": "dreamy_jang",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "bash",
+  "created": 1492112812,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "75b49d2d0849c42d8e8dc78a2fbd764a759372539c67e544fb941f85f62f1256",
+  "name": "flamboyant_sammet",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "bash",
+  "created": 1492112423,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "964a8878d2da0c7f2f8c2c8ed825585cbd055bb1569d8b358f81f882d55d934f",
+  "name": "hopeful_ramanujan",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "-e TZ=America/Chicago bash",
+  "created": 1492112392,
+  "state": "created",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "ab0a552a56545a7ed55b13cda08d45444e6315e1952a2f73bb8f3d3143c05f69",
+  "name": "distracted_poitras",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "/bin/bash",
+  "created": 1492112129,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "47d3ee86465a7f5a830d40849a427a1794ef171418a84d04f978142aab36034e",
+  "name": "romantic_panini5",
+  "image": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "imageID": "sha256:6a2f32de169d14e6f8a84538eaa28f2629872d7d4f580a303b296c60db36fbd7",
+  "command": "bash",
+  "created": 1492111937,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "6a720551ebd40128728faac63566c2682120e24e815e3a96679ec821374650dd",
+  "name": "elastic_borg",
+  "image": "tim/tensorflow:latest-gpu",
+  "imageID": "sha256:630ceff8428ca54aed74daf5d63af09d05f7ef112325db58688a1e38a9100e81",
+  "command": "/run_jupyter.sh",
+  "created": 1491003955,
+  "state": "exited",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "nvidia_driver_375.26",
+    "Source": "/var/lib/nvidia-docker/volumes/nvidia_driver/375.26",
+    "Destination": "/usr/local/nvidia",
+    "Driver": "nvidia-docker",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "349ad1622de1050961dfda1ca9de1b6abb9b881345fd3e200e065e5698bb1626",
+  "name": "gifted_allen",
+  "image": "gcr.io/tensorflow/tensorflow:latest-gpu",
+  "imageID": "sha256:ede52c2645b276f5826b0e4fca5842690dd57052a0aecd47fa19eb930e12c2ec",
+  "command": "/run_jupyter.sh",
+  "created": 1491003867,
+  "state": "exited",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "nvidia_driver_375.26",
+    "Source": "/var/lib/nvidia-docker/volumes/nvidia_driver/375.26",
+    "Destination": "/usr/local/nvidia",
+    "Driver": "nvidia-docker",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "2cd77ee828b19f42649dbb3b81afdb50024ad89acd8cd91c53eb8752b64f2119",
+  "name": "admiring_bassi",
+  "image": "tim/tensorflow",
+  "imageID": "sha256:a926191197d30dfb0df56ff11898523361b03628876e11edec68359cec2618d2",
+  "command": "/run_jupyter.sh",
+  "created": 1491003519,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "68389091f1ea1d5512c22e913cd28439614ebe3f41da733d2c5ebd13b619393e",
+  "name": "sad_bassi",
+  "image": "gcr.io/tensorflow/tensorflow",
+  "imageID": "sha256:0bb45d441a4b22efbb3883a1a947e7e6ab4a737ca39455a8c4e6dc3e08367e40",
+  "command": "/run_jupyter.sh",
+  "created": 1491002878,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "bce10a558b24902d3bae4bc38d97b97e8c3d9c854260177fdd7740bdda36217a",
+  "name": "frosty_meninsky",
+  "image": "tensorflow/tensorflow:latest-gpu",
+  "imageID": "sha256:ede52c2645b276f5826b0e4fca5842690dd57052a0aecd47fa19eb930e12c2ec",
+  "command": "/run_jupyter.sh",
+  "created": 1490712122,
+  "state": "exited",
+  "ports": [],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "nvidia_driver_375.26",
+    "Source": "/var/lib/nvidia-docker/volumes/nvidia_driver/375.26",
+    "Destination": "/usr/local/nvidia",
+    "Driver": "nvidia-docker",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "f586ba0789c2a95292b7538c96c0cf73e1133a7c2ee6b67689cdb3301397ee1b",
+  "name": "fervent_volhard",
+  "image": "tensorflow/tensorflow:latest-gpu",
+  "imageID": "sha256:ede52c2645b276f5826b0e4fca5842690dd57052a0aecd47fa19eb930e12c2ec",
+  "command": "/run_jupyter.sh",
+  "created": 1490672606,
+  "state": "exited",
+  "ports": [
+   {
+    "PrivatePort": 6006,
+    "Type": "tcp"
+   },
+   {
+    "PrivatePort": 8888,
+    "Type": "tcp"
+   }
+  ],
+  "mounts": [
+   {
+    "Type": "volume",
+    "Name": "nvidia_driver_375.26",
+    "Source": "/var/lib/nvidia-docker/volumes/nvidia_driver/375.26",
+    "Destination": "/usr/local/nvidia",
+    "Driver": "nvidia-docker",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": ""
+   }
+  ],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ },
+ {
+  "id": "056ad02294512c364f76e27772a3ef69a8da28845b502469d67048cfffa42961",
+  "name": "keen_varahamihira",
+  "image": "kaixhin/torch",
+  "imageID": "sha256:b376da4482c1dc942e0db585955145f8303b996fc190e17eec8374eb265e8313",
+  "command": "/bin/bash",
+  "created": 1490650380,
+  "state": "exited",
+  "ports": [],
+  "mounts": [],
+  "mem_usage": 0,
+  "mem_limit": 0,
+  "mem_percent": 0,
+  "cpu_percent": 0,
+  "pids": 0,
+  "netIO": {
+   "rx": 0,
+   "wx": 0
+  },
+  "blockIO": {
+   "r": 0,
+   "w": 0
+  },
+  "cpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "precpu_stats": {
+   "cpu_usage": {
+    "total_usage": 0,
+    "usage_in_kernelmode": 0,
+    "usage_in_usermode": 0
+   },
+   "throttling_data": {
+    "periods": 0,
+    "throttled_periods": 0,
+    "throttled_time": 0
+   }
+  },
+  "memory_stats": {},
+  "networks": {},
+  "processes": []
+ }
+]

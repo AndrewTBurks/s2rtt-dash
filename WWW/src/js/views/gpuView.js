@@ -28,7 +28,7 @@ let GpuView = function(div) {
   }
 
   function drawGpuUtil(gpuData) {
-
+    console.log(gpuData);
   }
 
   function resize() {

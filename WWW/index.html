@@ -125,23 +125,23 @@
           </div>
           <div class="sectionBody" id="sage2Section" data-bind="foreach:servers">
             <div class="server">
-              <p data-bind="text: 'Name: '+vir_host_name"></p>
+              <p data-bind="text: 'Name: '+name"></p>
               <br>
               <p class="big">
                 Mem:
-                <span class="val" data-bind="text: App.util.calc.BtoGB(vir_mem_used)"></span> GB
+                <span class="val" data-bind="text: App.util.calc.BtoGB(mem_usage)"></span> GB
               </p>
               <p class="big">
                 CPU:
-                <span class="val" data-bind="text: vir_cpu_utilization.toFixed(2)"></span> %
+                <span class="val" data-bind="text: (cpu_percent).toFixed(2)"></span> %
               </p>
               <p class="big">
                 IN:
-                <span class="val" data-bind="text: App.util.calc.BtoMB(vir_bytes_in)"></span> MB
+                <span class="val" data-bind="text: App.util.calc.BtoMB(netIO.rx)"></span> MB
               </p>
               <p class="big">
                 OUT:
-                <span class="val" data-bind="text: App.util.calc.BtoMB(vir_bytes_out)"></span> MB
+                <span class="val" data-bind="text: App.util.calc.BtoMB(netIO.tx)"></span> MB
               </p>
             </div>
           </div>

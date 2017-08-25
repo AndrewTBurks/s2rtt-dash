@@ -63,13 +63,14 @@ let DiskView = function (div) {
         .attr("viewBox", [0, 0, 300, 450].join(" "))
         .attr("preserveAspectRatio", "xMidYMid")
         .each(function(disk) {
-            let arcData = [{
-                type: "free",
-                percent: disk.available
-              },
+            let arcData = [
               {
                 type: "used",
                 percent: disk.used
+              },
+              {
+                type: "free",
+                percent: disk.available
               }
             ];
 
@@ -83,6 +84,7 @@ let DiskView = function (div) {
 
             let pie = d3.pie()
               .padAngle(0.05)
+              .sort(null)
               .value(d => d.percent)
               (arcData);
             

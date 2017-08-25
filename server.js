@@ -34,39 +34,11 @@ app.get('/api/json/', function(req, res) {
   });
 });
 
-// get gpu and si data once
-
-// gpu information
-smi(function (err, data) {
- 
-  // handle errors 
-  if (err) {
-    console.warn(err);
-    process.exit(1);
-  }
- 
-  // display GPU information 
-  smiData = data;
-    fs.writeFile("smi.json", JSON.stringify(data, null, "\t"));
-  
-});
+smiDataUpdate();
 
 // system information
 si.getStaticData(function (data) {
     siData = data;
-    fs.writeFile("si-getStaticData.json", JSON.stringify(data, null, "\t"));
-});
-
-//si.battery(function (data) {
-//    console.log(data);
-//});
-
-
-// filesystem info (mounted drives)
-df(function (error, response) {
-    if (error) { throw error; }
-    dfData = response;
-    fs.writeFile("df.json", JSON.stringify(response, null, "\t"));
 });
 
 
@@ -74,6 +46,8 @@ df(function (error, response) {
 let dataUpdateInterval = setInterval(function() {
     sFlowDataUpdate();
     dfDataUpdate();
+    smiDataUpdate();
+    sage2_dockerUpdate();
 }, 1000);
 
 // sage2rtt sflow endpoint
@@ -98,7 +72,7 @@ function sFlowDataUpdate() {
     };
 
     system = {};
-    sage2cloud = {};
+    // sage2cloud = {};
 
     for (let datatype of Object.keys(keys)) {
       let tag = keys[datatype];
@@ -110,18 +84,18 @@ function sFlowDataUpdate() {
     }
 
     // host ids of processes that are sage2 cloud servers
-    let sage2hostIDs = _.map(
-      _.filter(Object.keys(data), (key) => _.includes(key, ".vir_host_name") && _.includes(data[key], "sage2-")),
-      hostID => hostID.slice(0, -1 * ".vir_host_name".length)
-    );
+//     let sage2hostIDs = _.map(
+//       _.filter(Object.keys(data), (key) => _.includes(key, ".vir_host_name") && _.includes(data[key], "sage2-")),
+//       hostID => hostID.slice(0, -1 * ".vir_host_name".length)
+//     );
 
-    _.forEach(sage2hostIDs, id => {
-      sage2cloud[id] = {};
+//     _.forEach(sage2hostIDs, id => {
+//       sage2cloud[id] = {};
 
-      _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, id)), (serverKey) => {
-        sage2cloud[id][serverKey.slice(id.length + 1)] = data[serverKey];
-      });
-    });
+//       _.forEach(_.filter(Object.keys(data), (key) => _.includes(key, id)), (serverKey) => {
+//         sage2cloud[id][serverKey.slice(id.length + 1)] = data[serverKey];
+//       });
+//     });
     // console.log("System State updated", date);
   });
 }
@@ -134,4 +108,67 @@ function dfDataUpdate() {
         
         dfData = _.filter(response, drive => _.includes(mountPoints, drive.mount));
     });   
+}
+
+function smiDataUpdate() {
+    let keys = {
+        "nvidia_smi_log": {
+            "timestamp": true,
+            "attached_gpus": true,
+            "gpu": {
+                "product_name": true,
+                "gpu_virtualization_mode": true,
+                "fan_speed": true,
+                "performance_state": true,
+                "fb_memory_usage": true,
+                "bar1_memory_usage": true,
+                "compute_mode": true,
+                "utilization": true,
+                "temperature": true,
+                "power_readings": {
+                    "power_draw": true,
+                    "power_limit": true
+                },
+                "processes": {
+                    "process_info": true
+                }
+            }
+        }   
+    };
+    
+    smi(function (err, data) {
+        // handle errors 
+        if (err) {
+            console.warn(err);
+            process.exit(1);
+        }
+
+        // display GPU information 
+        smiData = {};
+        
+        for (let key of Object.keys(keys)) {
+            smiData[key] = {};
+            copyValue(key, data, smiData, keys);
+        }
+    });
+    
+    
+    
+    function copyValue(key, from, to, keyobj) {
+        if (typeof keyobj[key] === "object") {
+            for (let subkey of Object.keys(keyobj[key])) {
+                to[key][subkey] = {};
+                copyValue(subkey, from[key], to[key], keyobj[key]);
+            }
+        } else {
+            to[key] = from[key];
+        }
+    }
+}
+
+function sage2_dockerUpdate() {
+    sage2cloud = {};
+    si.dockerAll(function (data) {
+        sage2cloud = _.filter(data, docker => _.includes(docker.name, "sage2-"));
+    });
 }
