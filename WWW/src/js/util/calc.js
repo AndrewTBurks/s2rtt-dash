@@ -10,6 +10,9 @@ App.util = App.util || {};
     },
     BtoMB: function(bytes) {
       return (bytes / 1048576).toFixed(2);
+    },
+    KBtoTB: function(bytes) {
+      return (bytes/1073741824).toFixed(2);
     }
   };
 })();

@@ -1,3 +1,5 @@
+let fs = require('fs');
+
 let request = require('request');
 let express = require('express');
 let _ = require('lodash');
@@ -25,7 +27,10 @@ app.get('/api/json/', function(req, res) {
   res.type('application/json');
   res.send({
     system,
-    sage2cloud
+    sage2cloud,
+    dfData,
+    smiData,
+    siData
   });
 });
 
@@ -42,12 +47,14 @@ smi(function (err, data) {
  
   // display GPU information 
   smiData = data;
-    console.log(JSON.stringify(data, null, ' '));
+    fs.writeFile("smi.json", JSON.stringify(data, null, "\t"));
+  
 });
 
 // system information
 si.getStaticData(function (data) {
     siData = data;
+    fs.writeFile("si-getStaticData.json", JSON.stringify(data, null, "\t"));
 });
 
 //si.battery(function (data) {
@@ -59,12 +66,14 @@ si.getStaticData(function (data) {
 df(function (error, response) {
     if (error) { throw error; }
     dfData = response;
+    fs.writeFile("df.json", JSON.stringify(response, null, "\t"));
 });
 
 
 // start data update cycle
 let dataUpdateInterval = setInterval(function() {
-  sFlowDataUpdate();
+    sFlowDataUpdate();
+    dfDataUpdate();
 }, 1000);
 
 // sage2rtt sflow endpoint
@@ -79,8 +88,8 @@ function sFlowDataUpdate() {
 
     let keys = {
       cpu: "2.1.cpu",
-      gpu: "2.1.nvml",
-      disk: "2.1.disk",
+      //gpu: "2.1.nvml", // gpu from nvidia-smi
+      //disk: "2.1.disk", // disk from df
       mem: "2.1.mem",
       bytes: "2.1.bytes",
       pkts: "2.1.pkts",
@@ -113,7 +122,16 @@ function sFlowDataUpdate() {
         sage2cloud[id][serverKey.slice(id.length + 1)] = data[serverKey];
       });
     });
-
     // console.log("System State updated", date);
   });
+}
+
+function dfDataUpdate() {
+    let mountPoints = ["/", "/bigdata", "/iridium", "/extreme"]; 
+    
+    df(function (error, response) {
+        if (error) { throw error; }
+        
+        dfData = _.filter(response, drive => _.includes(mountPoints, drive.mount));
+    });   
 }

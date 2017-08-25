@@ -1,0 +1,226 @@
+[
+	{
+		"filesystem": "/dev/md127",
+		"size": 467440640,
+		"used": 398144160,
+		"available": 69296480,
+		"capacity": 0.86,
+		"mount": "/"
+	},
+	{
+		"filesystem": "devtmpfs",
+		"size": 61749656,
+		"used": 0,
+		"available": 61749656,
+		"capacity": 0,
+		"mount": "/dev"
+	},
+	{
+		"filesystem": "tmpfs",
+		"size": 65960656,
+		"used": 0,
+		"available": 65960656,
+		"capacity": 0,
+		"mount": "/dev/shm"
+	},
+	{
+		"filesystem": "tmpfs",
+		"size": 65960656,
+		"used": 4303116,
+		"available": 61657540,
+		"capacity": 0.07,
+		"mount": "/run"
+	},
+	{
+		"filesystem": "tmpfs",
+		"size": 65960656,
+		"used": 0,
+		"available": 65960656,
+		"capacity": 0,
+		"mount": "/sys/fs/cgroup"
+	},
+	{
+		"filesystem": "/dev/md126",
+		"size": 1039296,
+		"used": 294100,
+		"available": 745196,
+		"capacity": 0.29,
+		"mount": "/boot"
+	},
+	{
+		"filesystem": "bigdata",
+		"size": 3037294592,
+		"used": 2569346048,
+		"available": 467948544,
+		"capacity": 0.85,
+		"mount": "/bigdata"
+	},
+	{
+		"filesystem": "131.193.183.199:/SSData/evl",
+		"size": 5527422976,
+		"used": 5352450048,
+		"available": 169340928,
+		"capacity": 0.97,
+		"mount": "/iridium"
+	},
+	{
+		"filesystem": "131.193.183.68:/mnt/xfs1",
+		"size": 281255034880,
+		"used": 102969091072,
+		"available": 178285943808,
+		"capacity": 0.37,
+		"mount": "/extreme"
+	},
+	{
+		"filesystem": "tmpfs",
+		"size": 13192132,
+		"used": 4,
+		"available": 13192128,
+		"capacity": 0.01,
+		"mount": "/run/user/990"
+	},
+	{
+		"filesystem": "tmpfs",
+		"size": 13192132,
+		"used": 0,
+		"available": 13192132,
+		"capacity": 0,
+		"mount": "/run/user/2825"
+	},
+	{
+		"filesystem": "tmpfs",
+		"size": 13192132,
+		"used": 0,
+		"available": 13192132,
+		"capacity": 0,
+		"mount": "/run/user/2821"
+	},
+	{
+		"filesystem": "tmpfs",
+		"size": 13192132,
+		"used": 0,
+		"available": 13192132,
+		"capacity": 0,
+		"mount": "/run/user/2775"
+	},
+	{
+		"filesystem": "tmpfs",
+		"size": 13192132,
+		"used": 0,
+		"available": 13192132,
+		"capacity": 0,
+		"mount": "/run/user/4105"
+	},
+	{
+		"filesystem": "/dev/dm-4",
+		"size": 10474496,
+		"used": 1125392,
+		"available": 9349104,
+		"capacity": 0.11,
+		"mount": "/var/lib/docker/devicemapper/mnt/3071bd4f4d157cfe9d3b871089228741ab6cb23d41686bf1408e84833c104552"
+	},
+	{
+		"filesystem": "shm",
+		"size": 65536,
+		"used": 0,
+		"available": 65536,
+		"capacity": 0,
+		"mount": "/var/lib/docker/containers/6fc47a94d71454327e9fffc3385a9679907a2c315d002141d62bd7d59d18294e/shm"
+	},
+	{
+		"filesystem": "/dev/dm-1",
+		"size": 10474496,
+		"used": 1396212,
+		"available": 9078284,
+		"capacity": 0.14,
+		"mount": "/var/lib/docker/devicemapper/mnt/227c1caeed08fc34986b50e0ef58d502a8520e5268669f14fc0688480e5eab66"
+	},
+	{
+		"filesystem": "shm",
+		"size": 65536,
+		"used": 0,
+		"available": 65536,
+		"capacity": 0,
+		"mount": "/var/lib/docker/containers/17d0630e64ced821c1cc1698bee3d05901f9ef78bb988c0a0e27787c6050496b/shm"
+	},
+	{
+		"filesystem": "/dev/dm-2",
+		"size": 10474496,
+		"used": 1176016,
+		"available": 9298480,
+		"capacity": 0.12,
+		"mount": "/var/lib/docker/devicemapper/mnt/05455a928134f124f2080ed62412717d21e069703438c24b96149b97c128e218"
+	},
+	{
+		"filesystem": "shm",
+		"size": 65536,
+		"used": 0,
+		"available": 65536,
+		"capacity": 0,
+		"mount": "/var/lib/docker/containers/1f9e44ad5de31a61e9ca0af84c5c7137d5f43e49d069e166371d1d6ba575f32d/shm"
+	},
+	{
+		"filesystem": "/dev/dm-3",
+		"size": 10474496,
+		"used": 1176016,
+		"available": 9298480,
+		"capacity": 0.12,
+		"mount": "/var/lib/docker/devicemapper/mnt/14689b9ef76e5da39b2786f7a508001db78cc398c546851bda95786352142901"
+	},
+	{
+		"filesystem": "shm",
+		"size": 65536,
+		"used": 0,
+		"available": 65536,
+		"capacity": 0,
+		"mount": "/var/lib/docker/containers/4bd299a570bf1994ff84dec100ce496b2c2ae5869ad77a712242abb9820f5ed1/shm"
+	},
+	{
+		"filesystem": "tmpfs",
+		"size": 13192132,
+		"used": 0,
+		"available": 13192132,
+		"capacity": 0,
+		"mount": "/run/user/2826"
+	},
+	{
+		"filesystem": "/dev/dm-5",
+		"size": 10474496,
+		"used": 1194040,
+		"available": 9280456,
+		"capacity": 0.12,
+		"mount": "/var/lib/docker/devicemapper/mnt/9ee86a3281176150f41d3224aae2fef6a6ee1f1d66d9294e5033c5357e07faa7"
+	},
+	{
+		"filesystem": "shm",
+		"size": 65536,
+		"used": 0,
+		"available": 65536,
+		"capacity": 0,
+		"mount": "/var/lib/docker/containers/51213e8abd683e1583fdcab8d5f2fe34d55048aaeac924441a8656e59448fb5a/shm"
+	},
+	{
+		"filesystem": "tmpfs",
+		"size": 13192132,
+		"used": 0,
+		"available": 13192132,
+		"capacity": 0,
+		"mount": "/run/user/2818"
+	},
+	{
+		"filesystem": "/dev/dm-6",
+		"size": 10474496,
+		"used": 1124316,
+		"available": 9350180,
+		"capacity": 0.11,
+		"mount": "/var/lib/docker/devicemapper/mnt/a498d1af0ab750896f7ec94c0f0793f0404c3d8b7d3eca4b0f0c89e778511a31"
+	},
+	{
+		"filesystem": "shm",
+		"size": 65536,
+		"used": 0,
+		"available": 65536,
+		"capacity": 0,
+		"mount": "/var/lib/docker/containers/491ed9722ad88b6cd442301af37b631d1d443da0c6a0885e2d391342a8855049/shm"
+	}
+]

@@ -1,0 +1,334 @@
+{
+	"version": "3.26.1",
+	"system": {
+		"manufacturer": "Supermicro",
+		"model": "X10DRi",
+		"version": "123456789",
+		"serial": "123456789",
+		"uuid": "00000000-0000-0000-0000-0CC47ADC1D34"
+	},
+	"os": {
+		"platform": "Linux",
+		"distro": "CentOS Linux",
+		"release": "7",
+		"codename": "",
+		"kernel": "3.10.0-514.21.1.el7.x86_64",
+		"arch": "x64",
+		"hostname": "sage2rtt.evl.uic.edu",
+		"logofile": "centos"
+	},
+	"versions": {
+		"kernel": "3.10.0-514.21.1.el7.x86_64",
+		"node": "6.11.0",
+		"v8": "5.1.281.102",
+		"npm": "3.10.10",
+		"pm2": "2.4.2",
+		"openssl": "1.0.2k"
+	},
+	"cpu": {
+		"manufacturer": "Intel®",
+		"brand": "Xeon®  E5-2667 v3",
+		"vendor": "GenuineIntel",
+		"family": "6",
+		"model": "63",
+		"stepping": "2",
+		"revision": "",
+		"speed": "3.20",
+		"speedmin": "",
+		"speedmax": "",
+		"cores": 32,
+		"cache": {
+			"l1d": 32768,
+			"l1i": 32768,
+			"l2": 262144,
+			"l3": 20971520
+		},
+		"flags": ""
+	},
+	"graphics": {
+		"controllers": [
+			{
+				"vendor": "ASPEED Tec",
+				"model": "hnology, Inc. ASPEED Graphics Family ",
+				"bus": "",
+				"vram": 128,
+				"vramDynamic": false
+			},
+			{
+				"vendor": "NVIDIA Corporation",
+				"model": "GM204GL [Quadro M4000] ",
+				"bus": "",
+				"vram": 32,
+				"vramDynamic": false
+			}
+		],
+		"displays": []
+	},
+	"net": [
+		{
+			"iface": "lo",
+			"ip4": "127.0.0.1",
+			"ip6": "::1",
+			"mac": "00:00:00:00:00:00",
+			"internal": true
+		},
+		{
+			"iface": "enp7s0f0",
+			"ip4": "131.193.78.68",
+			"ip6": "fe80::ec4:7aff:fedc:1d34",
+			"mac": "0c:c4:7a:dc:1d:34",
+			"internal": false
+		},
+		{
+			"iface": "ens6",
+			"ip4": "131.193.183.208",
+			"ip6": "fe80::f652:14ff:fe73:77e0",
+			"mac": "f4:52:14:73:77:e0",
+			"internal": false
+		},
+		{
+			"iface": "docker0",
+			"ip4": "172.17.0.1",
+			"ip6": "fe80::42:77ff:fe9c:9493",
+			"mac": "02:42:77:9c:94:93",
+			"internal": false
+		},
+		{
+			"iface": "veth64f79a6",
+			"ip4": "",
+			"ip6": "fe80::c50:79ff:feb7:98ee",
+			"mac": "0e:50:79:b7:98:ee",
+			"internal": false
+		},
+		{
+			"iface": "vethf19b056",
+			"ip4": "",
+			"ip6": "fe80::dcd0:42ff:fe86:ec2c",
+			"mac": "de:d0:42:86:ec:2c",
+			"internal": false
+		},
+		{
+			"iface": "veth008bba7",
+			"ip4": "",
+			"ip6": "fe80::ecf3:69ff:fe99:a63d",
+			"mac": "ee:f3:69:99:a6:3d",
+			"internal": false
+		},
+		{
+			"iface": "vethaab5c0b",
+			"ip4": "",
+			"ip6": "fe80::7855:9dff:febc:e221",
+			"mac": "7a:55:9d:bc:e2:21",
+			"internal": false
+		},
+		{
+			"iface": "veth8da0184",
+			"ip4": "",
+			"ip6": "fe80::4442:e5ff:fe01:d348",
+			"mac": "46:42:e5:01:d3:48",
+			"internal": false
+		},
+		{
+			"iface": "veth3934c5c",
+			"ip4": "",
+			"ip6": "fe80::4480:2bff:fe49:1dff",
+			"mac": "46:80:2b:49:1d:ff",
+			"internal": false
+		}
+	],
+	"memLayout": [
+		{
+			"size": 17179869184,
+			"bank": "P0_Node0_Channel0_Dimm0",
+			"type": "DDR4",
+			"clockSpeed": 2133,
+			"formFactor": "DIMM",
+			"partNum": "",
+			"serialNum": "02CE25A7",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": null,
+			"bank": "NO DIMM",
+			"type": "Unknown",
+			"clockSpeed": null,
+			"formFactor": "Unknown",
+			"partNum": "",
+			"serialNum": "NO DIMM",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": 17179869184,
+			"bank": "P0_Node0_Channel1_Dimm0",
+			"type": "DDR4",
+			"clockSpeed": 2133,
+			"formFactor": "DIMM",
+			"partNum": "",
+			"serialNum": "02CE248B",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": null,
+			"bank": "NO DIMM",
+			"type": "Unknown",
+			"clockSpeed": null,
+			"formFactor": "Unknown",
+			"partNum": "",
+			"serialNum": "NO DIMM",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": 17179869184,
+			"bank": "P0_Node0_Channel2_Dimm0",
+			"type": "DDR4",
+			"clockSpeed": 2133,
+			"formFactor": "DIMM",
+			"partNum": "",
+			"serialNum": "02CE9D0D",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": null,
+			"bank": "NO DIMM",
+			"type": "Unknown",
+			"clockSpeed": null,
+			"formFactor": "Unknown",
+			"partNum": "",
+			"serialNum": "NO DIMM",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": 17179869184,
+			"bank": "P0_Node0_Channel3_Dimm0",
+			"type": "DDR4",
+			"clockSpeed": 2133,
+			"formFactor": "DIMM",
+			"partNum": "",
+			"serialNum": "02CA163B",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": null,
+			"bank": "NO DIMM",
+			"type": "Unknown",
+			"clockSpeed": null,
+			"formFactor": "Unknown",
+			"partNum": "",
+			"serialNum": "NO DIMM",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": 17179869184,
+			"bank": "P1_Node1_Channel0_Dimm0",
+			"type": "DDR4",
+			"clockSpeed": 2133,
+			"formFactor": "DIMM",
+			"partNum": "",
+			"serialNum": "02CA1858",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": null,
+			"bank": "NO DIMM",
+			"type": "Unknown",
+			"clockSpeed": null,
+			"formFactor": "Unknown",
+			"partNum": "",
+			"serialNum": "NO DIMM",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": 17179869184,
+			"bank": "P1_Node1_Channel1_Dimm0",
+			"type": "DDR4",
+			"clockSpeed": 2133,
+			"formFactor": "DIMM",
+			"partNum": "",
+			"serialNum": "02BE06B9",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": null,
+			"bank": "NO DIMM",
+			"type": "Unknown",
+			"clockSpeed": null,
+			"formFactor": "Unknown",
+			"partNum": "",
+			"serialNum": "NO DIMM",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": 17179869184,
+			"bank": "P1_Node1_Channel2_Dimm0",
+			"type": "DDR4",
+			"clockSpeed": 2133,
+			"formFactor": "DIMM",
+			"partNum": "",
+			"serialNum": "02CE9D57",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": null,
+			"bank": "NO DIMM",
+			"type": "Unknown",
+			"clockSpeed": null,
+			"formFactor": "Unknown",
+			"partNum": "",
+			"serialNum": "NO DIMM",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": 17179869184,
+			"bank": "P1_Node1_Channel3_Dimm0",
+			"type": "DDR4",
+			"clockSpeed": 2133,
+			"formFactor": "DIMM",
+			"partNum": "",
+			"serialNum": "02CA192C",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		},
+		{
+			"size": null,
+			"bank": "NO DIMM",
+			"type": "Unknown",
+			"clockSpeed": null,
+			"formFactor": "Unknown",
+			"partNum": "",
+			"serialNum": "NO DIMM",
+			"voltageConfigured": null,
+			"voltageMin": null,
+			"voltageMax": null
+		}
+	],
+	"diskLayout": []
+}

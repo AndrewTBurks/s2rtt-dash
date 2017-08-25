@@ -48,7 +48,7 @@ let DataUpdateController = function() {
 
       App.views.cpu.drawCpuUtil(data.system.cpu);
       App.views.mem.drawMemUtil(data.system.mem);
-      App.views.disk.drawDiskUtil(data.system.disk);
+      App.views.disk.drawDiskUtil(data.dfData);
       App.views.gpu.drawGpuUtil(data.system.gpu);
 
       App.views.sage2.updateSAGE2Containers(data.sage2cloud);
